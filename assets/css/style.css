@@ -1,6 +1,37 @@
-*{
-    padding: 0;
-    margin:0;
+body{
+    background: blue;
+}
+
+.selections {
+    display: flex;
+    justify-content: center;
+}
+
+.selection {
+    background: none;
     border: none;
-    text-decoration: none;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.selection:hover {
+    transform: scale(1.2);
+}
+
+.results{
+    margin-top: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+}
+.result-score {
+    margin-left: .1rem;
+    font-size: .8rem;
+    color: blue;
+}
+img {
+    height: 150px;
 }

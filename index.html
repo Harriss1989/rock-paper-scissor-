@@ -7,21 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
 
 <body>
 
     <div class="selections">
-        <button class="selection"><img src="/assets/images/rock-hand.png" alt="hand in a fist to represent rock"></button>
-        <button class="selection"><img src="/assets/images/paper-hand.png" alt="hand flat to represent paper"></button>
-        <button class="selection"><img src="/assets/images/sicissor-hand.png"alt="hand with two fingers up to represent scissors"></button>
+        <button class="selection" data-selection="rock"><img src="/assets/images/rock-hand.png" alt="hand in a fist to represent rock"></button>
+        <button class="selection" data-selection="paper"><img src="/assets/images/paper-hand.png" alt="hand flat to represent paper"></button>
+        <button class="selection" data-selection="scissors"><img src="/assets/images/sicissor-hand.png"alt="hand with two fingers up to represent scissors"></button>
     </div>
     <div class="results">
-        <div>player
+        <div>
+            Player
             <span class="result-score">0</span>
         </div>
-        <div>computer
+        <div>
+            Computer
             <span class="result-score">0</span>
         </div>
     </div>
