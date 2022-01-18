@@ -1,6 +1,4 @@
-body{
-    background: blue;
-}
+
 
 .selections {
     display: flex;
@@ -33,5 +31,6 @@ body{
     color: blue;
 }
 img {
+    margin-top: 1rem;
     height: 150px;
 }
