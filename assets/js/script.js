@@ -3,6 +3,8 @@ const finalColumn = document.querySelector('[data-final-column]')
 const SElECTIONS = [
  {
     name: 'rock',
+    document.getElementById('hand')
+    .innerHTML = '<img src="asset/images/rock-hand.png" />',
     beats: 'scissors',
  },
  {
