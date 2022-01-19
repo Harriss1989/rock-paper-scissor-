@@ -1,5 +1,87 @@
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+/*new game modal*/
+.btn-new, .rulesBtn, .settingsBtn {
+    background: coral;
+    padding: 1em 2em;
+    color: #fff;
+    border: 0;
+    width: 40%;
+}
+.btn-new:hover, .rulesBtn:hover, .settingsBtn:hover{
+    background: #333;
+}
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
 
+.modal {
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+.closeBtn:hover,.closeBtn:focus {
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*keyfames*/
+
+@keyframes modalopen {
+    from{ opacity: 0;}
+    to{ opacity: 1;}
+}
+/* Player selections modal*/
+
+.btn-start {
+    background: coral;
+    padding: 1em 2em;
+    color: #fff;
+    border: 0;
+}
+.btn-start:hover{
+    background: #333;
+}
+#selectionModal{
+    display:none;
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
 .selections {
     display: flex;
     justify-content: center;
@@ -42,4 +124,29 @@
 img {
     margin-top: 1rem;
     height: 150px;
+}
+
+/*rules model*/
+
+#rules-container-modal {
+    display:none;
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+ /*settings model*/ 
+ 
+ #game-settings-modal {
+    display:none;
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
 }

@@ -1,54 +1,28 @@
-const selectionButtons = document.querySelectorAll('[data-selection]')
-const finalColumn = document.querySelector('[data-final-column]')
-const SElECTIONS = [
- {
-    name: 'rock',
-    document.getElementById('hand')
-    .innerHTML = '<img src="asset/images/rock-hand.png" />',
-    beats: 'scissors',
- },
- {
-    name: 'paper',
-    beats: 'rock',
- },
- {
-    name: 'scissors',
-    beats: 'paper',
- }
-]
-
-selectionButtons.forEach(selectionButton => {
-    selectionButton.addEventListener('click', e => {
-        const selectionName = selectionButton.dataset.selection
-        const selection = SElECTIONS.find(selection => selection.name === selectionName)
-        makeSelection(selection)
-    })
-})
-
-
-function makeSelection(selection) {
-    const computerSelection = randomSelection()
-    const yourWinner = Winner(selection, computerSelection)
-    const computerWinner = Winner(computerSelection, selection)
-    
-    addSelectionResult(computerSelection, computerWinner)
-    addSelectionResult(selection, yourWinner)
+// Get modal element
+var modal = document.getElementById('player-input-modal');
+// Get open modal buttons
+var modalBtn = document.getElementById('new-game');
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+// listen for clicks
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+// Function to open modal and close modal
+function openModal(){
+    modal.style.display = 'block';
 }
-
-function addSelectionResult(selection, winner) {
-    const div = document.createElement('div')
-    div.innerText= selection.img
-    div.classList.add('result-selection')
-    if (winner) div.classList.add('winner')
-    finalColumn.after(div)
+function closeModal(...args: []) {
+    rulesModal.style.display = 'none';
 
 }
 
-function Winner(selection, opponentSelection) {
-    return selection.beats === opponentSelection.name
-}
+// settings button
+var settingsBtn =document.getElementById('settings');
+// get settings modal
+var settingsModal = document.getElementById('game-settings-modal');
+// listen for settings button click
+settingsBtn.addEventListener('click', openSettingsModal);
 
-function randomSelection() {
-  const randomIndex = Math.floor(Math.random() * SElECTIONS.length)
-  return SElECTIONS[randomIndex]
+function openSettingsModal(){
+    settingsModal.style.display = 'block';
 }

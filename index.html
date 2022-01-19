@@ -12,24 +12,72 @@
 
 <body>
 
-    <div><button class="new-game">New Game</button></div>
-
-    <div class="selections">
-        <button class="selection" data-selection="rock"><img id="hand" src="/assets/images/rock-hand.png" alt="hand in a fist to represent rock"></button>
-        <button class="selection" data-selection="paper"><img src="/assets/images/paper-hand.png" alt="hand flat to represent paper"></button>
-        <button class="selection" data-selection="scissors"><img src="/assets/images/sicissor-hand.png"alt="hand with two fingers up to represent scissors"></button>
+    <!--new game button-->
+    <div class="btn-container">
+        <button id="new-game" class="btn-new">New Game</button>
+        <!--rules button-->
+        <button id="rules" class="rulesBtn">Game Rules</button>
+        <!--settings button-->
+        <button id="settings" class="settingsBtn">Settings</button>
     </div>
-    <div class="results">
-        <div>
-            Player
-            <span class="result-score">0</span>
+    <!--new game modal-->
+    <div id="player-input-modal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <label for="">Enter Your Name:</label>
+            <input type="text" id="player-name-input" placeholder="Jeff" required>
+            <button id="start-game" class="btn-start">Start Game</button>
         </div>
-        <div data-final-column>
-            Computer
-            <span class="result-score">0</span>
+    </div>
+    <!--rules modle-->
+    <div id="rules-container-modal">
+        <span class="closeBtn">&times;</span>
+        <h2>Rules Of the game</h2>
+        <h3>Classic</h3>
+        <p>Think back to the old school playground rules you remember as a kid, the game we played to settle any
+            argument!</p>
+        <br>
+        <h4>Symbols</h4>
+        <img src="assets/images/rock-hand.png" alt="rock hand">Rock
+        <img src="assets/images/paper-hand.png" alt="paper hand">Paper
+        <img src="assets/images/sicissor-hand.png" alt="scissors hand">Scissors
+        <h3>Invaders</h3>
+        <p>The loved game but with a twist two extra symbols adds a new dynamic</p>
+        <h4>Symbols</h4>
+        <img src="assets/images/lizard-hand.png" alt="hand">Lizard
+        <img src="assets/images/spock-hand.png" alt="spock salute">Spock
+    </div>
+<!--settings modle-->
+    <div id="game-settings-modal">
+        <h2>Game settings</h2>
+        <p>pick arena</p> 
+        <div><label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
         </div>
     </div>
 
+<!-- main game section-->
+    <div id="selectionModal">
+        <button class="selection" data-selection="rock"><img id="hand" src="/assets/images/rock-hand.png"
+                alt="hand in a fist to represent rock"></button>
+        <button class="selection" data-selection="paper"><img src="/assets/images/paper-hand.png"
+                alt="hand flat to represent paper"></button>
+        <button class="selection" data-selection="scissors"><img src="/assets/images/sicissor-hand.png"
+                alt="hand with two fingers up to represent scissors"></button>
+
+        <div class="results">
+            <div>
+                Player
+                <span class="result-score">0</span>
+            </div>
+            <div data-final-column>
+                Computer
+                <span class="result-score">0</span>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
