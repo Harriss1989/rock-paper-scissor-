@@ -44,12 +44,13 @@ body {
     animation-name: modalopen;
     animation-duration: 1s;
 }
-.closeBtn {
+.closeBtn, .closeBtn1 {
     color: #ccc;
     float: right;
     font-size: 30px;
 }
-.closeBtn:hover,.closeBtn:focus {
+.closeBtn:hover,.closeBtn:focus, 
+.closeBtn1:hover, .closeBtn1:focus {
     color:#000;
     text-decoration: none;
     cursor: pointer;
