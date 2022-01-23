@@ -89,7 +89,7 @@ body {
 }
 
 .selection {
-  
+  background: none;
     border: none;
     cursor: pointer;
    
@@ -97,6 +97,10 @@ body {
 
 .selection:hover {
     transform: scale(1.2);
+}
+.selection-image {
+    pointer-events: none;
+
 }
 
 .results{
