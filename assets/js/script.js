@@ -1,10 +1,25 @@
+//game logic 
+//const computerChoise = document.getElementById('computer-choice');
+//const playerChoice = document.getElementById('player-choice');
+//const resultDisplay = document.getElementById('results');
+//const possibleChoices = document.getElementsByClassName('selection')[0,1,2];
+//let userChoice 
+
+//possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+  //  userChoice = e.target.id
+   // playerChoice.innerHTML = userChoice
+//}))
+
 // Get modal element
 var modal = document.getElementById('player-input-modal');
 // Get open modal buttons
 var modalBtn = document.getElementById('new-game');
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
+
+
 // listen for clicks
+
 modalBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', outsideClick);

@@ -24,33 +24,41 @@
     <div id="player-input-modal" class="modal">
         <div class="modal-content">
             <span class="closeBtn">&times;</span>
-            <label for="">Enter Your Name:</label>
-            <input type="text" id="player-name-input" placeholder="Jeff" required>
-            <button id="start-game" class="btn-start">Start Game</button>
+            <form id="form" action="/" method="GET">
+                <div>
+                    <label for="name">Enter Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Jeff">
+                </div>
+                <div>
+                    <submit type="submit" id="start-game" class="btn-start">Start Game</submit>
+                </div>
+            </form>
         </div>
     </div>
     <!--rules modle-->
     <div id="rules-container-modal">
         <span class="closeBtn1">&times;</span>
-        <h2>Rules Of the game</h2>
-        <h3>Classic</h3>
-        <p>Think back to the old school playground rules you remember as a kid, the game we played to settle any
-            argument!</p>
-        <br>
-        <h4>Symbols</h4>
-        <img src="assets/images/rock-hand.png" alt="rock hand">Rock
-        <img src="assets/images/paper-hand.png" alt="paper hand">Paper
-        <img src="assets/images/sicissor-hand.png" alt="scissors hand">Scissors
-        <h3>Invaders</h3>
-        <p>The loved game but with a twist two extra symbols adds a new dynamic</p>
-        <h4>Symbols</h4>
-        <img src="assets/images/lizard-hand.png" alt="hand">Lizard
-        <img src="assets/images/spock-hand.png" alt="spock salute">Spock
+        <div id="rulesContent">
+            <h2>Rules Of the game</h2>
+            <h3>Classic</h3>
+            <p>Think back to the old school playground rules you remember as a kid, the game we played to settle any
+                argument!</p>
+            <br>
+            <h4>Symbols</h4>
+            <img src="assets/images/rock-hand.png" alt="rock hand">Rock
+            <img src="assets/images/paper-hand.png" alt="paper hand">Paper
+            <img src="assets/images/sicissor-hand.png" alt="scissors hand">Scissors
+            <h3>Spock</h3>
+            <p>The loved game but with a twist two extra symbols adds a new dynamic</p>
+            <h4>Symbols</h4>
+            <img src="assets/images/lizard-hand.png" alt="hand">Lizard
+            <img src="assets/images/spock-hand.png" alt="spock salute">Spock
+        </div>
     </div>
-<!--settings modle-->
+    <!--settings modle-->
     <div id="game-settings-modal">
         <h2>Game settings</h2>
-        <p>pick arena</p> 
+        <p>pick arena</p>
         <div><label class="switch">
                 <input type="checkbox">
                 <span class="slider"></span>
@@ -58,26 +66,16 @@
         </div>
     </div>
 
-<!-- main game section-->
-    <div id="selectionModal">
-        <button class="selection" data-selection="rock"><img id="hand" src="/assets/images/rock-hand.png"
-                alt="hand in a fist to represent rock"></button>
-        <button class="selection" data-selection="paper"><img src="/assets/images/paper-hand.png"
-                alt="hand flat to represent paper"></button>
-        <button class="selection" data-selection="scissors"><img src="/assets/images/sicissor-hand.png"
-                alt="hand with two fingers up to represent scissors"></button>
+    <!-- main game section-->
+    
+        <h2>Computer:<span id="computer-choice"></span></h2>
+        <h2>Player:<span id="player-choice">${playerName}</span></h2>
+        <h2>Result:<span id="results"></span></h2>
 
-        <div class="results">
-            <div>
-                Player
-                <span class="result-score">0</span>
-            </div>
-            <div data-final-column>
-                Computer
-                <span class="result-score">0</span>
-            </div>
-        </div>
-    </div>
+        <button class="selection" id="rock">rock</button>
+        <button class="selection" id="paper">paper</button>
+        <button class="selection" id="scissors">scissors</button>
+   
 </body>
 
 </html>

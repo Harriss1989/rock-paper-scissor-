@@ -39,7 +39,7 @@ body {
     background-color: #f4f4f4;
     margin: 20% auto;
     padding: 20px;
-    width: 70%;
+    width: 400px;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name: modalopen;
     animation-duration: 1s;
@@ -89,10 +89,10 @@ body {
 }
 
 .selection {
-    background: none;
+  
     border: none;
     cursor: pointer;
-    transition: 100ms;
+   
 }
 
 .selection:hover {
@@ -139,6 +139,14 @@ img {
     animation-name: modalopen;
     animation-duration: 1s;
 }
+#rulesContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
  /*settings model*/ 
  
  #game-settings-modal {
