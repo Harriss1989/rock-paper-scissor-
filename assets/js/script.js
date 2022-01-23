@@ -1,33 +1,23 @@
-//game logic 
-const computerChoise = document.getElementById('computer-choice');
-const playerChoice = document.getElementById('player-choice');
-const resultDisplay = document.getElementById('results');
-const possibleChoices = document.querySelectorAll('.selection');
-let userChoice 
-
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-   userChoice = e.target.src
-   playerChoice.innerHTML = `<img src="${userChoice}">`
-}))
+const mainContainer = document.createElement('div')
 
 // Get modal element
-var modal = document.getElementById('player-input-modal');
+let modal = document.getElementById('player-input-modal');
 // Get open modal buttons
-var modalBtn = document.getElementById('new-game');
-var closeBtn = document.getElementsByClassName('closeBtn')[0];
+let modalBtn = document.getElementById('new-game');
+let closeBtn = document.getElementsByClassName('closeBtn')[0];
 // start game button
-var startBtn =document.getElementById('start-game');
+let startBtn =document.getElementById('start-game');
 // Get game modal elements
-var gameModal = document.getElementById('selectionModal');
+let gameModal = document.getElementById('selectionModal');
 // get rules modal
-var rulesModal =document.getElementById('rules-container-modal');
+let rulesModal =document.getElementById('rules-container-modal');
 // rules button
-var rulesBtn = document.getElementById('rules');
-var closeBtn1 = document.getElementsByClassName('closeBtn1')[0];
+let rulesBtn = document.getElementById('rules');
+let closeBtn1 = document.getElementsByClassName('closeBtn1')[0];
 // settings button
-var settingsBtn =document.getElementById('settings');
+let settingsBtn =document.getElementById('settings');
 // get settings modal
-var settingsModal = document.getElementById('game-settings-modal');
+let settingsModal = document.getElementById('game-settings-modal');
 // listen for clicks
 
 modalBtn.addEventListener('click', openModal);
@@ -66,3 +56,24 @@ function closeModal1(){
 function openSettingsModal(){
     settingsModal.style.display = 'block';
 }
+
+//game logic 
+const computerChoice = document.getElementById('computer-choice');
+const playerChoice = document.getElementById('player-choice');
+const resultDisplay = document.getElementById('results');
+const possibleChoices = document.querySelectorAll('.selection');
+let userChoice 
+
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+   userChoice = e.target.src
+   playerChoice.innerHTML = `<img src="${userChoice}">`;
+   computerChoice.innerHTML = getComputerMove();
+}))
+function getComputerMove(){
+    let computerOptions = ["rock", "paper", "scissors"];
+    let randomChoice = Math.floor(Math.random() * computerOptions.length);
+    let computerMove = computerOptions[randomChoice];
+    return computerMove
+}
+
+
