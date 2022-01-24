@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
 }
 /*new game modal*/
-.btn-new, .rulesBtn, .settingsBtn {
+.btn-new, .rulesBtn, .settingsBtn  {
     background: coral;
     padding: 1em 2em;
     color: #fff;

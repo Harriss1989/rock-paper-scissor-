@@ -7,27 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper,scissors</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/script.js" defer></script>
+    
+    
 </head>
 
 <body>
 
     <!--new game button-->
-    <div class="btn-container">
-        <button id="new-game" class="btn-new">New Game</button>
-        <!--rules button-->
-        <button id="rules" class="rulesBtn">Game Rules</button>
-        <!--settings button-->
-        <button id="settings" class="settingsBtn">Settings</button>
-    </div>
+    <div id="menu-container"></div>
     <!--new game modal-->
     <div id="player-input-modal" class="modal">
         <div class="modal-content">
             <span class="closeBtn">&times;</span>
-            <form id="form" action="/" method="GET">
+            <form id="form" action="" method="">
                 <div>
                     <label for="name">Enter Your Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Jeff">
+                    <input type="text" id="name" name="name" placeholder="Jeff" maxlength="20">
                 </div>
                 <div>
                     <submit type="submit" id="start-game" class="btn-start">Start Game</submit>
@@ -37,7 +32,7 @@
     </div>
     <!--rules modle-->
     <div id="rules-container-modal">
-        <span class="closeBtn1">&times;</span>
+        <span class="closeBtn">&times;</span>
         <div id="rulesContent">
             <h2>Rules Of the game</h2>
             <h3>Classic</h3>
@@ -57,6 +52,7 @@
     </div>
     <!--settings modle-->
     <div id="game-settings-modal">
+        <span class="closeBtn">&times;</span>
         <h2>Game settings</h2>
         <p>pick arena</p>
         <div><label class="switch">
@@ -67,7 +63,7 @@
     </div>
 
     <!-- main game section-->
-    <div>
+    <!-- <div id="main-game">
         <h2>Computer:<span id="computer-choice"></span></h2>
         <h2>Player:<span id="player-choice"></span></h2>
         <h2>Result:<span id="results"></span></h2>
@@ -75,7 +71,9 @@
         <img class="selection" id="rock" src="/assets/images/rock-hand.png" alt="">
         <img class='selection' id="paper" src="/assets/images/paper-hand.png" alt="">
         <img class='selection' id="scissors" src="/assets/images/sicissor-hand.png" alt="">
-    </div>
+    </div> -->
+    <script src="./assets/js/script.js"></script>
+    <a href="https://www.vecteezy.com/free-vector/vector">Vector Vectors by Vecteezy</a>
 </body>
 
 </html>
