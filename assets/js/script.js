@@ -12,8 +12,8 @@ let userName = "";// User name input empty string
 let startBtn = document.getElementById('start-game'); // start game button
 let overallWinner = false;
 let roundsNeeded = 5;
-
-
+let playerChoice = "";
+let computerChoice = "";
 
 //main game function
 function mainMenu() {
@@ -82,7 +82,7 @@ function startGameScreen(){
     <h2>Computer:<span id="computer-choice"></span></h2>
     <h2>${userName}<span id="player-choice"></span></h2>
     <h2>Result:<span id="results"></span></h2>
-    <h2>Scores: <h3>Computer: <span id="computer-score"></span></h3> <h3>${userName}<span id="player-score"></span></h3></h2>
+    <h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}<span id="player-score">0</span></h3></h2>
     <span></span>
 
     <img class="selection" id="rock" src="/assets/images/rock-hand.png" alt="">
@@ -96,24 +96,25 @@ function startGameScreen(){
 
 function gameLoop(){
     while (overallWinner == false) {
-        playerChoice = getPlayerChoice();
-        computerChoice = getComputerChoice();
+        console.log('game loop')
+        getPlayerChoice();
+        getComputerChoice();
         roundWinner = declareWinner(playerChoice, computerChoice);
         updateScore(roundWinner);
         checkForOverallWinner();
     }
 }
-const playerChoice = document.getElementById('player-choice');
-const possibleChoices = document.querySelectorAll('.selection');
 
 function getPlayerChoice(){
-    possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-        userChoice = e.target.src 
-        playerChoice.innerHTML = `<img src="${userChoice}">`;
-        removeEventListener.forEach(possibleChoice);
-        return userChoice
-    }
+
 }
+    
+        
+        
+        
+        
+    
+
 
 function getComputerChoice(){
     let computerOptions = ["rock", "paper", "scissors"];
@@ -143,11 +144,11 @@ function checkForOverallWinner(){
 // let compare
 
 // possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-//    
+//    userChoice = e.target.src 
 //.   userMove = e.target.id
-//    
-//    
-//.   
+//    playerChoice.innerHTML = `<img src="${userChoice}">`;
+//    removeEventListener.forEach(possibleChoice);
+//.   return userChoice
 // }))
 // function getComputerMove(){
 //     let computerOptions = ["rock", "paper", "scissors"];
