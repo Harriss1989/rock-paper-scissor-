@@ -3,18 +3,18 @@ let mainContainer = `<div class="btn-container">
 <button id="rules" class="rulesBtn">Game Rules</button>
 <button id="settings" class="settingsBtn">Settings</button>
 </div>`;
-// Get modal element
-let modal = document.getElementById('player-input-modal');
-// Get game modal elements
-let gameModal = document.getElementById('selectionModal');
-// get rules modal
-let rulesModal = document.getElementById('rules-container-modal');
-// get settings modal
-let settingsModal = document.getElementById('game-settings-modal');
-let userName = "";
+
+let modal = document.getElementById('player-input-modal');// Get modal element
+let gameModal = document.getElementById('selectionModal');// Get game modal elements
+let rulesModal = document.getElementById('rules-container-modal');// get rules modal
+let settingsModal = document.getElementById('game-settings-modal');// get settings modal
+let userName = "";// User name input empty string
 let startBtn = document.getElementById('start-game'); // start game button
 let overallWinner = false;
 let roundsNeeded = 5;
+
+
+
 //main game function
 function mainMenu() {
     document.getElementById('menu-container').innerHTML = mainContainer;
@@ -29,7 +29,7 @@ function mainMenu() {
         btn.addEventListener('click', closeModal);
     }
     window.addEventListener('click', outsideClick);
-    startBtn.addEventListener('click', startGameModal); //listen for start button click
+    //startBtn.addEventListener('click', startGameModal); //listen for start button click
     rulesBtn.addEventListener('click', openRulesModal); //listen for rules button click
     settingsBtn.addEventListener('click', openSettingsModal); // listen for settings button click
 }
@@ -103,8 +103,16 @@ function gameLoop(){
         checkForOverallWinner();
     }
 }
-function getPlayerChoice(){
+const playerChoice = document.getElementById('player-choice');
+const possibleChoices = document.querySelectorAll('.selection');
 
+function getPlayerChoice(){
+    possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+        userChoice = e.target.src 
+        playerChoice.innerHTML = `<img src="${userChoice}">`;
+        removeEventListener.forEach(possibleChoice);
+        return userChoice
+    }
 }
 
 function getComputerChoice(){
@@ -128,18 +136,18 @@ function checkForOverallWinner(){
 
 // //game logic 
 // const computerChoice = document.getElementById('computer-choice');
-// const playerChoice = document.getElementById('player-choice');
+// 
 // const resultDisplay = document.getElementById('results');
-// const possibleChoices = document.querySelectorAll('.selection');
+// 
 // let userChoice 
 // let compare
 
 // possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-//    userChoice = e.target.src 
+//    
 //.   userMove = e.target.id
-//    playerChoice.innerHTML = `<img src="${userChoice}">`;
-//    removeEventListener.forEach(possibleChoice);
-//.   return userMove
+//    
+//    
+//.   
 // }))
 // function getComputerMove(){
 //     let computerOptions = ["rock", "paper", "scissors"];
