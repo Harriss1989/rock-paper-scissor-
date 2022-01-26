@@ -81,8 +81,8 @@ function startGameScreen(){
     document.getElementById('menu-container').innerHTML = `<div id="main-game">
     <h2>Computer:<span id="computer-choice"></span></h2>
     <h2>${userName}<span id="player-choice"></span></h2>
-    <h2>Result:<span id="results"></span></h2>
-    <h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}<span id="player-score">0</span></h3></h2>
+    <h2>Result of Last Round:<span id="results"></span></h2>
+    <h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2>
     <span></span>
 
     <img class="selection" id="rock" src="/assets/images/rock-hand.png" alt="">
@@ -105,22 +105,54 @@ function gameLoop(){
     }
 }
 
-function getPlayerChoice(){
+function updateScore(roundWinner){
+     if(roundWinner == 'player'){
+         let currentPlayerScore = document.getElementById('player-score').innerText;
+         let updatePlayerScore = parseInt(currentPlayerScore) + 1;
+         document.getElementById('player-score').innerText = updatePlayerScore;
+         document.getElementById('results').innerText = 'Player Win';
+     }else if (roundWinner == 'computer'){
+        let currentComputerScore = document.getElementById('computer-score').innerText;
+        let updateComputerScore = parseInt(currentComputerScore) + 1;
+        document.getElementById('computer-score').innerText = updateComputerScore;
+        document.getElementById('results').innerText = 'Computer Win';
+     }else {
+        document.getElementById('results').innerText = 'Draw';
+     }
+}
 
+
+function getPlayerChoice(){
+    console.log('player choice')
+     let playerOptions = document.getElementsByClassName('selection');
+     for(let i = 0; i < playerOptions.length; i++){
+        playerOptions[i].addEventListener('click', identifyPlayerClick);
+        console.log('add el' + i)
+     }
+     function identifyPlayerClick(e){
+        let userChoice = e.target.src 
+        let userMove = e.target.id
+        document.getElementById('player-choice').innerHTML = `<img src="${userChoice}">`;
+        playerChoice = userMove;
+        console.log(playerChoice)
+        removePlayerClick();
+     };
+     function removePlayerClick(){
+        for(let i = 0; i < playerOptions.length; i++){
+            playerOptions[i].removeEventListener('click', identifyPlayerClick);
+            console.log('- el' + i)
+     }
 }
     
+function declareWinner(){
+    return "player"
+}       
         
-        
-        
-        
-    
-
-
 function getComputerChoice(){
     let computerOptions = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random() * computerOptions.length);
     let computerMove = computerOptions[randomChoice];
-    return computerMove;
+    computerChoice = computerMove;
 }
 
 function checkForOverallWinner(){
@@ -128,10 +160,12 @@ function checkForOverallWinner(){
     let playerScore = document.getElementById('player-score').innerText;
     if(parseInt(computerScore)== roundsNeeded){
         //what happens when computer wins
-        overallWinner = true
+        overallWinner = true 
+        console.log('computer-wins')
     } else if(parseInt(playerScore)== roundsNeeded){
         // what happens when player wins 
         overallWinner = true
+        console.log('player-wins')
     }
 }
 
