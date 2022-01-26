@@ -29,15 +29,9 @@ function mainMenu() {
         btn.addEventListener('click', closeModal);
     }
     window.addEventListener('click', outsideClick);
-    //startBtn.addEventListener('click', startGameModal); //listen for start button click
-    rulesBtn.addEventListener('click', openRulesModal); //listen for rules button click
-    settingsBtn.addEventListener('click', openSettingsModal); // listen for settings button click
-}
-
-// Function to open modal and close modal
-// function openModal() {
-
-// }
+    rulesBtn.addEventListener('click', openEachModal); //listen for rules button click
+    settingsBtn.addEventListener('click', openEachModal); // listen for settings button click
+};
 
 function closeModal() {
     modal.style.display = 'none';
@@ -48,8 +42,19 @@ function closeModal() {
 function outsideClick(e) {
     if (e.target == modal) {
         modal.style.display = 'none';
+    } else if (e.target == rulesModal) {
+        rulesModal.style.display = 'none';
     }
 }
+
+function openEachModal(e) {
+    if (e.target == document.getElementById('rules')){
+        rulesModal.style.display = 'block';
+    } else if (e.target == document.getElementById('settings')){
+        settingsModal.style.display = 'block';
+    }
+}
+
 // function to open new game
 function openRulesModal() {
     rulesModal.style.display = 'block';
@@ -97,14 +102,6 @@ function startGameScreen() {
 
 
 function gameLoop() {
-    // while (overallWinner == false) {
-    //     console.log('game loop')
-    //     getPlayerChoice();
-    //     getComputerChoice();
-    //     roundWinner = declareWinner(playerChoice, computerChoice);
-    //     updateScore(roundWinner);
-    //     checkForOverallWinner();
-    // }
     console.log('gameloop')
     getPlayerChoice();
 }
@@ -210,32 +207,4 @@ function checkForOverallWinner() {
         gameLoop();
     }
 };
-
-// //game logic 
-// const computerChoice = document.getElementById('computer-choice');
-// 
-// const resultDisplay = document.getElementById('results');
-// 
-// let userChoice 
-// let compare
-
-// possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-//    userChoice = e.target.src 
-//.   userMove = e.target.id
-//    playerChoice.innerHTML = `<img src="${userChoice}">`;
-//    removeEventListener.forEach(possibleChoice);
-//.   return userChoice
-// }))
-// function getComputerMove(){
-//     let computerOptions = ["rock", "paper", "scissors"];
-//     let randomChoice = Math.floor(Math.random() * computerOptions.length);
-//     let computerMove = computerOptions[randomChoice];
-//     return computerMove;
-// }
-// //function compareResults()
-
-
-
-
-
 window.onload = mainMenu();
