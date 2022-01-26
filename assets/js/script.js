@@ -44,13 +44,15 @@ function outsideClick(e) {
         modal.style.display = 'none';
     } else if (e.target == rulesModal) {
         rulesModal.style.display = 'none';
+    } else(e.target == settingsModal) {
+        settingsModal.style.display = 'none';
     }
 }
 
 function openEachModal(e) {
-    if (e.target == document.getElementById('rules')){
+    if (e.target == document.getElementById('rules')) {
         rulesModal.style.display = 'block';
-    } else if (e.target == document.getElementById('settings')){
+    } else if (e.target == document.getElementById('settings')) {
         settingsModal.style.display = 'block';
     }
 }
@@ -165,7 +167,7 @@ function declareWinner() {
             updateScore();
             break;
         case 'rockscissors':
-        case 'paperrock': 
+        case 'paperrock':
         case 'scissorspaper':
             roundWinner = 'player';
             console.log('player is winner')
