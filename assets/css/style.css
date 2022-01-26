@@ -4,6 +4,8 @@ body {
     font-size: 17px;
     line-height: 1.6;
 }
+
+
 /*new game modal*/
 .btn-new, .rulesBtn, .settingsBtn  {
     background: coral;
