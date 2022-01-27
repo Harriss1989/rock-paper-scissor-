@@ -23,7 +23,7 @@ function mainMenu() {
     let closeBtns = document.getElementsByClassName('closeBtn'); // Close modal 
     let rulesBtn = document.getElementById('rules'); // rules button
     let settingsBtn = document.getElementById('settings'); // settings button
-    modalBtn.addEventListener('click', playerName); // listen for clicks
+    modalBtn.addEventListener('click', playerName); // listen for clicks sais void??
 
     for (let btn of closeBtns) {
         btn.addEventListener('click', closeModal);
@@ -58,13 +58,13 @@ function openEachModal(e) {
 }
 
 // function to open new game
-function openRulesModal() {
-    rulesModal.style.display = 'block';
-}
+// function openRulesModal() {
+//     rulesModal.style.display = 'block';
+// }
 
-function openSettingsModal() {
-    settingsModal.style.display = 'block';
-}
+// function openSettingsModal() {
+//     settingsModal.style.display = 'block';
+// }
 
 function playerName() {
     modal.style.display = 'block';

@@ -2,6 +2,7 @@
 * {
     margin: 0;
     font-family: "Supermercado One", sans-serif;
+    overscroll-behavior-block: none;
 }
 
 body {
@@ -97,11 +98,11 @@ h4 {
     color: white;
 }
 
-.closeBtn,
-.closeBtn1 {
+.closeBtn {
     color: white;
     float: right;
     font-size: 30px;
+    margin: -8px 12px;
 }
 
 .closeBtn:hover,
@@ -128,16 +129,14 @@ h4 {
 /* Player selections modal*/
 
 .btn-start {
-    background: coral;
-    padding: 10px 10px;
+    background: #420707e0;
+    padding: 8px 8px;
     color: #fff;
     border: 0;
-    margin: 20px;
+    margin: 100px;
     cursor: pointer;
     border-radius: 5px;
-    position: absolute;
-    right: 488px;
-    box-shadow: 0px 0px 10px 5px black;
+    box-shadow: 0px 0px 10px 2px bla
 }
 
 .btn-start:hover {
@@ -170,6 +169,7 @@ h4 {
 #form-style {
     width: fit-content;
     height: 205px;
+    font-size: 22px;
 }
 
 .selection:hover {
@@ -229,7 +229,28 @@ img {
     left: 50%;
 }
 .symbols-labels {
-    word-spacing: 151px;
+    word-spacing: 157px;
     margin: 0 0 0 160px;
     font-weight: 900;
+}
+#name {
+    border-radius: 5px;
+    height: 20px;
+}
+#form {
+    padding: 45px;
+    color: white;
+}
+.form-layout {
+    padding: 10px;
+    margin-top: -25px;
+    margin-bottom: 15px;
+}
+.page-container{
+    max-width: 1920px;
+	margin: 0 auto;
+	width: 100%;
+}
+.start-h2 {
+    font-size: 1em;
 }
