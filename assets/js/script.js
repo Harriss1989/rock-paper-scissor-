@@ -44,7 +44,7 @@ function outsideClick(e) {
         modal.style.display = 'none';
     } else if (e.target == rulesModal) {
         rulesModal.style.display = 'none';
-    } else(e.target == settingsModal) {
+    } else if (e.target == settingsModal) {
         settingsModal.style.display = 'none';
     }
 }

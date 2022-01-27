@@ -41,8 +41,8 @@ body {
     background-color: #f4f4f4;
     margin: 20% auto;
     padding: 20px;
-    width: 400px;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    width: 825px;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 20%), 0 7px 20px 0 rgb(0 0 0 / 17%);
     animation-name: modalopen;
     animation-duration: 1s;
 }
@@ -135,7 +135,7 @@ img {
 
 /*rules model*/
 
-#rules-container-modal {
+/* #rules-container-modal {
     display:none;
     background-color: #f4f4f4;
     margin: 20% auto;
@@ -144,18 +144,18 @@ img {
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name: modalopen;
     animation-duration: 1s;
-}
-#rulesContent {
+} */
+/* #rulesContent {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-}
+} */
 
  /*settings model*/ 
  
- #game-settings-modal {
+ /* #game-settings-modal {
     display:none;
     background-color: #f4f4f4;
     margin: 20% auto;
@@ -163,5 +163,5 @@ img {
     width: 70%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name: modalopen;
-    animation-duration: 1s;
-}
+    animation-duration: 1s; */
+/* ß */
