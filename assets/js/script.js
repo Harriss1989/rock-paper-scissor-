@@ -88,15 +88,14 @@ function playerName() {
 
 function startGameScreen() {
     document.getElementById('menu-container').innerHTML = `<div id="main-game">
-    <h2>Computer:<span id="computer-choice"></span></h2>
-    <h2>${userName}<span id="player-choice"></span></h2>
-    <h2>Result of Last Round:<span id="results"></span></h2>
-    <h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2>
-    <span></span>
-
     <img class="selection" id="rock" src="/assets/images/rock-hand.png" alt="">
     <img class='selection' id="paper" src="/assets/images/paper-hand.png" alt="">
     <img class='selection' id="scissors" src="/assets/images/sicissor-hand.png" alt="">
+    
+    <h2>Computer:<span id="computer-choice"></span></h2><h2>${userName}<span id="player-choice"></span></h2>
+    <h2>Result of Last Round:<span id="results"></span></h2>
+    <h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2>
+    <span></span>
 </div>`;
     overallWinner = false;
     gameLoop();
