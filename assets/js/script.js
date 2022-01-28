@@ -3,7 +3,9 @@ let mainContainer = `<div class="btn-container">
 <button id="rules" class="rulesBtn">Game Rules</button>
 <button id="settings" class="settingsBtn">Settings</button>
 </div>`;
-
+let beach = backgrounds[0];
+let space = backgrounds[1];
+let playground = backgrounds[2];
 let modal = document.getElementById('player-input-modal'); // Get modal element
 let gameModal = document.getElementById('selectionModal'); // Get game modal elements
 let rulesModal = document.getElementById('rules-container-modal'); // get rules modal
@@ -15,6 +17,7 @@ let roundsNeeded = 5;
 let playerChoice = "";
 let computerChoice = "";
 let roundWinner = '';
+let bgArenaPick = '';
 //main game function
 function mainMenu() {
     document.getElementById('menu-container').innerHTML = mainContainer;
@@ -54,8 +57,10 @@ function openEachModal(e) {
         rulesModal.style.display = 'block';
     } else if (e.target == document.getElementById('settings')) {
         settingsModal.style.display = 'block';
+        backgroundChange();
     }
 }
+
 
 // function to open new game
 // function openRulesModal() {
@@ -85,6 +90,32 @@ function playerName() {
         }
     }
 }
+
+function backgroundChange() {
+    console.log('arena pick')
+    let arenaPick = document.getElementsByClassName("arena-img");
+    for (let i = 0; i < arenaPick.length; i++) {
+        arenaPick[i].addEventListener('click', selectedBackground);
+        console.log('add el 1' + i);
+    }
+
+    function selectedBackground(e) {
+        let arenaChoice = e.target.id
+        if (arenaChoice == 'house-bg'){
+            applyBackground(playground);
+        }else if (arenaChoice == "beach-bg") {
+            applyBackground(beach)
+        }else if (arenaChoice == 'window-bg') {
+            applyBackground(space);
+        }
+        
+    };
+
+};
+
+function applyBackground(bg) {
+    document.getElementById('background').innerHTML=bg;
+    }
 
 function startGameScreen() {
     document.getElementById('menu-container').innerHTML = `<div id="main-game">

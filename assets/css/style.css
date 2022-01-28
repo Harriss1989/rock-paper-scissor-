@@ -5,12 +5,14 @@
     overscroll-behavior-block: none;
 }
 
+:root {
+    --primary: #420707e0;
+}
+
 body {
-    
     font-size: 17px;
     line-height: 1.6;
     margin: 0;
-
 }
 
 h4 {
