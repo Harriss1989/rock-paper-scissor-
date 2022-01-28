@@ -74,7 +74,7 @@ function playerName() {
             startGameScreen();
             modal.style.display = 'none';
         } else {
-            userName = name.value + ':';
+            userName = name.value;
             startGameScreen();
             modal.style.display = 'none';
         }
@@ -92,7 +92,7 @@ function backgroundChange() {
 
     function selectedBackground(e) {
         let arenaChoice = e.target.id
-        if (arenaChoice == 'house-bg') {
+        if (arenaChoice == 'court-bg') {
             let primary = '#f4b10b';
             let secondary = '#333333f7';
             let text = '#000000';
@@ -133,6 +133,7 @@ function startGameScreen() {
     <h2>Result of Last Round:<span id="results"></span></h2>
     <h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2>
     <span></span>
+    <button id="rules" class="rulesBtn">Game Rules</button>
 </div>`;
     overallWinner = false;
     gameLoop();
