@@ -93,9 +93,10 @@ function backgroundChange() {
     function selectedBackground(e) {
         let arenaChoice = e.target.id
         if (arenaChoice == 'house-bg') {
-            let primary = '#92ba3a';
+            let primary = '#f4b10b';
             let secondary = '#333333f7';
             let text = '#000000';
+            let box = '0px 20px 30px 0px #f9f5ea'
             applyBackground(playground, primary, secondary, text);
 
         } else if (arenaChoice == "beach-bg") {

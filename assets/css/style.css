@@ -3,6 +3,7 @@
     margin: 0;
     font-family: "Supermercado One", sans-serif;
     overscroll-behavior-block: none;
+    
 }
 
 :root {
@@ -17,6 +18,7 @@
 
     /* --secondary: #031f3e;
     --quaternary: #4e2f24; */
+    /* #f4b10b */
 }
 
 body {
@@ -47,7 +49,7 @@ h4 {
 .settingsBtn {
     background: var(--primary);
     padding: 1em 2em;
-    color: var(--text-light);
+    color: var(--text-header);
     border: 0;
     width: 40%;
     font-size: 20px;
@@ -118,16 +120,14 @@ h4 {
 }
 
 .closeBtn {
-    color: var(--text-light);
+    color: var(--text-header);
     float: right;
     font-size: 30px;
     margin: -8px 12px;
 }
 
 .closeBtn:hover,
-.closeBtn:focus,
-.closeBtn1:hover,
-.closeBtn1:focus {
+.closeBtn:focus{
     color: var(--text-dark);
     text-decoration: none;
     cursor: pointer;
