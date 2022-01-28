@@ -61,16 +61,6 @@ function openEachModal(e) {
     }
 }
 
-
-// function to open new game
-// function openRulesModal() {
-//     rulesModal.style.display = 'block';
-// }
-
-// function openSettingsModal() {
-//     settingsModal.style.display = 'block';
-// }
-
 function playerName() {
     modal.style.display = 'block';
     let name = document.getElementById('name');
