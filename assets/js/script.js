@@ -81,6 +81,7 @@ function playerName() {
     }
 }
 
+
 function backgroundChange() {
     console.log('arena pick')
     let arenaPick = document.getElementsByClassName("arena-img");
@@ -91,21 +92,35 @@ function backgroundChange() {
 
     function selectedBackground(e) {
         let arenaChoice = e.target.id
-        if (arenaChoice == 'house-bg'){
-            applyBackground(playground);
-        }else if (arenaChoice == "beach-bg") {
-            applyBackground(beach)
-        }else if (arenaChoice == 'window-bg') {
-            applyBackground(space);
+        if (arenaChoice == 'house-bg') {
+            let primary = '#92ba3a';
+            let secondary = '#333333f7';
+            let text = '#000000';
+            applyBackground(playground, primary, secondary, text);
+
+        } else if (arenaChoice == "beach-bg") {
+            let primary = '#420707e0';
+            let secondary = '#333333f7';
+            let text = '#ffffff';
+            applyBackground(beach, primary, secondary, text);
+        } else if (arenaChoice == 'window-bg') {
+            let primary = '#031f3e';
+            let secondary ='#333333f7';
+            let text = '#ffffff';
+            applyBackground(space, primary, secondary, text);
         }
-        
+
     };
 
 };
 
-function applyBackground(bg) {
-    document.getElementById('background').innerHTML=bg;
-    }
+function applyBackground(bg, primary, secondary, text) {
+    document.getElementById('background').innerHTML = bg;
+    document.querySelector(':root').style.setProperty('--primary', primary);
+    document.querySelector(':root').style.setProperty('--secondary', secondary);
+    document.querySelector(':root').style.setProperty('--text-header', text);
+
+}
 
 function startGameScreen() {
     document.getElementById('menu-container').innerHTML = `<div id="main-game">

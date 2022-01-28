@@ -7,9 +7,16 @@
 
 :root {
     --primary: #420707e0;
-    --secondary: #031f3e;
-    --quaternary: #4e2f24;
+    --secondary: #333333f7;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --text-header: #ffffff;
 
+
+
+
+    /* --secondary: #031f3e;
+    --quaternary: #4e2f24; */
 }
 
 body {
@@ -38,20 +45,20 @@ h4 {
 .btn-new,
 .rulesBtn,
 .settingsBtn {
-    background: #420707e0;
+    background: var(--primary);
     padding: 1em 2em;
-    color: #fff;
+    color: var(--text-light);
     border: 0;
     width: 40%;
     font-size: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px black;
+    box-shadow: 0px 0px 10px 5px var(--text-dark);
 }
 
 .btn-new:hover,
 .rulesBtn:hover,
 .settingsBtn:hover {
-    background: #333;
+    background: var(--secondary);
 }
 
 .btn-container {
@@ -83,7 +90,7 @@ h4 {
 }
 
 .modal-content {
-    background-color: #333333f7;
+    background-color: var(--secondary);
     margin: 20% auto;
     width: 825px;
     box-shadow: 0 5px 8px 0 rgb(0 0 0 / 20%), 0 7px 20px 0 rgb(0 0 0 / 17%);
@@ -92,9 +99,9 @@ h4 {
     border-radius: 20px;
 }
 .modal-header {
-    background: #420707e0;
+    background: var(--primary);
     padding: 15px;
-    color: white;
+    color: var(--text-header);
     border-radius: 10px;
 }
 
@@ -104,14 +111,14 @@ h4 {
 
 .modal-body {
     padding: 10px 20px;
-    color: white;
+    color: var(--text-light);
 }
 .modal-body h3 {
     text-align: center;
 }
 
 .closeBtn {
-    color: white;
+    color: var(--text-light);
     float: right;
     font-size: 30px;
     margin: -8px 12px;
@@ -121,7 +128,7 @@ h4 {
 .closeBtn:focus,
 .closeBtn1:hover,
 .closeBtn1:focus {
-    color: #000;
+    color: var(--text-dark);
     text-decoration: none;
     cursor: pointer;
 }
@@ -141,9 +148,9 @@ h4 {
 /* Player selections modal*/
 
 .btn-start {
-    background: #420707e0;
+    background: var(--primary);
     padding: 8px 8px;
-    color: #fff;
+    color: var(--text-light);
     border: 0;
     margin: 100px;
     cursor: pointer;
@@ -252,7 +259,7 @@ img {
 }
 #form {
     padding: 45px;
-    color: white;
+    color: var(--text-light);
 }
 .form-layout {
     padding: 10px;
