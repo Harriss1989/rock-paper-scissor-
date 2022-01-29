@@ -124,18 +124,20 @@ function applyBackground(bg, primary, secondary, text) {
 }
 
 function startGameScreen() {
-    document.getElementById('menu-container').innerHTML = `<div id="main-game">
-    <img class="selection" id="rock" src="/assets/images/rock-hand.png" alt="">
-    <img class="selection" id="paper" src="/assets/images/paper-hand.png" alt="">
-    <img class="selection" id="scissors" src="/assets/images/sicissor-hand.png" alt="">
+    document.getElementById('menu-container').innerHTML = `<div id="main-game" class="grid-container">
+    <div class="grid-item1"><img class="selection" id="rock" src="/assets/images/rock-hand.png" alt="3d hand in a fist represents rock"></div>
+    <div class="grid-item2"><img class="selection" id="paper" src="/assets/images/paper-hand.png" alt="3d hand flat represents paper"></div>
+    <div class="grid-item3"><img class="selection" id="scissors" src="/assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors"></div>
     
-    <h2>Computer:<span id="computer-choice"></span></h2><h2>${userName}<span id="player-choice"></span></h2>
-    <h2>Result of Last Round:<span id="results"></span></h2>
-    <h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2>
-    <span></span>
-    <button id="rules" class="btn-main">Game Rules</button>
-    <button id="main-menu" class="btn-main">Main Menu</button> 
-</div>`;
+    <div class="grid-item4"><h2>Computer:<span id="computer-choice"></span></h2><h2>${userName}<span id="player-choice"></span></h2></div>
+    <div class="grid-item5"><h2>Result of Last Round:<span id="results"></span></h2></div>
+    <div class="grid-item6"><h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
+    <div class="grid-item7"></div>
+    <div class="grid-item8"></div>
+   
+</div>
+<button id="rules" class="btn-main">Game Rules</button>
+    <button id="main-menu" class="btn-main">Main Menu</button>`;
     overallWinner = false;
     gameLoop();
 }

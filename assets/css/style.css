@@ -69,7 +69,12 @@ img {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 5px var(--text-dark);
 }
-
+#rules {
+   margin-bottom: 0;
+}
+#main {
+    margin-bottom: 0;
+ }
 .btn-main:hover {
     background: var(--secondary);
 }
@@ -262,4 +267,42 @@ img {
     max-width: 1920px;
 	margin: 0 auto;
 	width: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.grid-item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.grid-item2 {
+
+}
+.grid-item3 {
+
+}
+.grid-item4 {
+
+}
+.grid-item5 {
+
+}
+.grid-item6 {
+
+}
+.grid-item7 {
+
+}
+.grid-item8 {
+
 }
