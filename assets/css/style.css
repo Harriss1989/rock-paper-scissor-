@@ -3,7 +3,6 @@
     margin: 0;
     font-family: "Supermercado One", sans-serif;
     overscroll-behavior-block: none;
-    
 }
 
 :root {
@@ -12,19 +11,16 @@
     --text-light: #ffffff;
     --text-dark: #000000;
     --text-header: #ffffff;
-
-
-
-
-    /* --secondary: #031f3e;
-    --quaternary: #4e2f24; */
-    /* #f4b10b */
 }
 
 body {
     font-size: 17px;
     line-height: 1.6;
     margin: 0;
+}
+
+.start-h2 {
+    font-size: 1em;
 }
 
 h4 {
@@ -38,15 +34,32 @@ h4 {
     padding: 8px;
     font-weight: 900;
 }
+
 .arena-img:hover {
     cursor: pointer;
     transform: scale(1.2);
+} 
+
+img {
+    margin-top: 1rem;
+    height: 150px;
+}
+
+.arena-img {
+    height: 80px;
+    padding: 50px;
+    margin: 0;
+}
+
+.rules-img {
+    height: 80px;
+    align-content: center;
+    margin: auto;
+    margin-left: 160px;
 }
 
 /*new game modal*/
-.btn-new,
-.rulesBtn,
-.settingsBtn {
+.btn-main {
     background: var(--primary);
     padding: 1em 2em;
     color: var(--text-header);
@@ -57,9 +70,7 @@ h4 {
     box-shadow: 0px 0px 10px 5px var(--text-dark);
 }
 
-.btn-new:hover,
-.rulesBtn:hover,
-.settingsBtn:hover {
+.btn-main:hover {
     background: var(--secondary);
 }
 
@@ -70,6 +81,35 @@ h4 {
     text-align: center;
     align-items: center;
     gap: 20px;
+}
+
+.closeBtn {
+    color: var(--text-header);
+    float: right;
+    font-size: 30px;
+    margin: -8px 12px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus{
+    color: var(--text-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-start {
+    background: var(--primary);
+    padding: 8px 8px;
+    color: var(--text-light);
+    border: 0;
+    margin: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 2px black;
+}
+
+.btn-start:hover {
+    background: #333;
 }
 
 #menu-container {
@@ -119,20 +159,6 @@ h4 {
     text-align: center;
 }
 
-.closeBtn {
-    color: var(--text-header);
-    float: right;
-    font-size: 30px;
-    margin: -8px 12px;
-}
-
-.closeBtn:hover,
-.closeBtn:focus{
-    color: var(--text-dark);
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /*keyfames*/
 
 @keyframes modalopen {
@@ -147,21 +173,6 @@ h4 {
 
 /* Player selections modal*/
 
-.btn-start {
-    background: var(--primary);
-    padding: 8px 8px;
-    color: var(--text-light);
-    border: 0;
-    margin: 100px;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 2px black;
-}
-
-.btn-start:hover {
-    background: #333;
-}
-
 #selectionModal {
     display: none;
     background-color: #f4f4f4;
@@ -173,7 +184,7 @@ h4 {
     animation-duration: 1s;
 }
 
-.selections {
+.selection {
     display: flex;
     justify-content: center;
 }
@@ -182,7 +193,6 @@ h4 {
     background: none;
     border: none;
     cursor: pointer;
-
 }
 
 #form-style {
@@ -224,24 +234,6 @@ h4 {
     font-size: 1.5rem;
 }
 
-img {
-    margin-top: 1rem;
-    height: 150px;
-}
-
-.arena-img {
-    height: 80px;
-    padding: 50px;
-    margin: 0;
-}
-
-.rules-img {
-    height: 80px;
-    align-content: center;
-    margin: auto;
-    margin-left: 160px;
-}
-
 #main-game {
     transform: translateX(-50%) translateY(25%);
     position: fixed;
@@ -270,7 +262,4 @@ img {
     max-width: 1920px;
 	margin: 0 auto;
 	width: 100%;
-}
-.start-h2 {
-    font-size: 1em;
 }
