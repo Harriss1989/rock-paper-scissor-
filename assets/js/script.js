@@ -59,6 +59,7 @@ function openEachModal(e) {
     } else if (e.target == document.getElementById('settings')) {
         settingsModal.style.display = 'block';
         backgroundChange();
+        roundWanted();
     }
 }
 
@@ -115,6 +116,13 @@ function backgroundChange() {
     };
 
 };
+
+function roundWanted(){
+    document.getElementById("round-slider").addEventListener('input', function(){
+        roundsNeeded = document.getElementById('round-slider').value;
+        document.getElementById('rounds-wanted').innerText = roundsNeeded;
+    })
+}
 
 function applyBackground(bg, primary, secondary, text) {
     document.getElementById('background').innerHTML = bg;
