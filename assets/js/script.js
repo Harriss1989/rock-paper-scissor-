@@ -18,6 +18,7 @@ let playerChoice = "";
 let computerChoice = "";
 let roundWinner = '';
 let bgArenaPick = '';
+
 //main game function
 function mainMenu() {
     document.getElementById('menu-container').innerHTML = mainContainer;
@@ -129,14 +130,13 @@ function startGameScreen() {
     <div class="grid-item2"><img class="selection" id="paper" src="/assets/images/paper-hand.png" alt="3d hand flat represents paper"></div>
     <div class="grid-item3"><img class="selection" id="scissors" src="/assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors"></div>
     
-    <div class="grid-item4"><h2>Computer:<span id="computer-choice"></span></h2><h2>${userName}:<span id="player-choice"></span></h2></div>
-    <div class="grid-item5"><h2>Result of Last Round:<span id="results"></span></h2></div>
-    <div class="grid-item6"><h2>Scores: <h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
-    <div class="grid-item7"></div>
-    <div class="grid-item8"></div>
+    <div class="grid-item4"><h2>Computer<span id="computer-choice"></span></h2></div>
+    <div class="grid-item8"><h2>V.S</h2></div>
+    <div class="grid-item7"><h2>${userName}<span id="player-choice"></span></h2></div>
+    <div class="grid-item5"><h2>Result of Last Round: <span id="results"></span></h2></div>
+    <div class="grid-item6"><h2>Scores<h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
 </div>
-    <button id="rules" class="btn-main">Game Rules</button>
-    <button id="main-menu" class="btn-main">Main Menu</button>`;
+   <div><button id="main-menu" class="btn-main">Main Menu</button></div>`; 
     overallWinner = false;
     gameLoop();
     returnToMainScreen();
@@ -150,8 +150,8 @@ function gameLoop() {
 }
 
 function returnToMainScreen() {
-   let menuBtn = document.getElementById("main-menu")
-   menuBtn.addEventListener('click', mainMenu)
+   let menuBtn = document.getElementById("main-menu");
+   menuBtn.addEventListener('click', mainMenu);
 }
 
 

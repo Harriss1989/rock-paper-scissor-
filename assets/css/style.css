@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
 * {
     margin: 0;
     font-family: "Supermercado One", sans-serif;
@@ -17,8 +18,22 @@ body {
     font-size: 17px;
     line-height: 1.6;
     margin: 0;
+    overflow-x: hidden;
 }
 
+svg {
+    min-width: 156vh;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.background-svg{
+    min-height: 100vh;
+    width: 100vw;
+}
 .start-h2 {
     font-size: 1em;
 }
@@ -38,7 +53,7 @@ h4 {
 .arena-img:hover {
     cursor: pointer;
     transform: scale(1.2);
-} 
+}
 
 img {
     margin-top: 1rem;
@@ -69,12 +84,13 @@ img {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 5px var(--text-dark);
 }
-#rules {
-   margin-bottom: 0;
+
+#main-menu {
+    position: fixed;
+    top: 1100px;
+    right: 315px;
 }
-#main {
-    margin-bottom: 0;
- }
+
 .btn-main:hover {
     background: var(--secondary);
 }
@@ -96,7 +112,7 @@ img {
 }
 
 .closeBtn:hover,
-.closeBtn:focus{
+.closeBtn:focus {
     color: var(--text-dark);
     text-decoration: none;
     cursor: pointer;
@@ -145,6 +161,7 @@ img {
     animation-duration: 1s;
     border-radius: 20px;
 }
+
 .modal-header {
     background: var(--primary);
     padding: 15px;
@@ -160,6 +177,7 @@ img {
     padding: 10px 20px;
     color: var(--text-light);
 }
+
 .modal-body h3 {
     text-align: center;
 }
@@ -240,69 +258,88 @@ img {
 }
 
 #main-game {
-    transform: translateX(-50%) translateY(25%);
+    transform: translateX(-46%) translateY(-6%);
     position: fixed;
-    width: 50%;
     left: 50%;
 }
+
 .symbols-labels {
     word-spacing: 157px;
     margin: 0 0 0 160px;
     font-weight: 900;
 }
+
 #name {
     border-radius: 5px;
     height: 20px;
 }
+
 #form {
     padding: 45px;
     color: var(--text-light);
 }
+
 .form-layout {
     padding: 10px;
     margin-top: -25px;
     margin-bottom: 15px;
 }
-.page-container{
+
+.page-container {
     max-width: 1920px;
-	margin: 0 auto;
-	width: 100%;
+    margin: 0 auto;
+    width: 100%;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    background-color: #2196F3;
+    grid-gap: 95px;
+
     padding: 10px;
 }
-.grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
+
+.grid-container>div {
+
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
 }
+
 .grid-item1 {
-    grid-column-start: 1;
+    grid-row-start: 4;
+}
+
+.grid-item2 {
+    grid-row-start: 4;
+}
+
+.grid-item3 {
+    grid-row-start: 4;
+}
+
+.grid-item4 {
+    grid-column-start: 3;
     grid-column-end: 3;
 }
-.grid-item2 {
 
-}
-.grid-item3 {
-
-}
-.grid-item4 {
-
-}
 .grid-item5 {
-
+    grid-row-start: 5;
+    grid-column-end: 4;
+    grid-column-start: 1;
 }
+
 .grid-item6 {
-
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 4;
 }
+
 .grid-item7 {
-
+    grid-row-start: 2;
 }
-.grid-item8 {
 
+.grid-item8 {
+    grid-row-start: 2;
+    grid-column-start: 2;
 }
