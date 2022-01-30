@@ -234,6 +234,11 @@ function getComputerChoice() {
     let computerOptions = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random() * computerOptions.length);
     let computerMove = computerOptions[randomChoice];
+    if (computerMove == "rock") {
+        document.getElementById('computer-choice').innerHTML= '<img src="/assets/images/rock-hand.png" alt="3d hand in a fist represents rock">';
+    } else if (computerMove == "paper") {
+        document.getElementById('computer-choice').innerHTML= '<img src="/assets/images/paper-hand.png" alt="3d hand flat represents paper">';
+    } else { document.getElementById('computer-choice').innerHTML= '<img src="/assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors">'};
     computerChoice = computerMove;
     console.log('computer chose' + computerChoice)
     declareWinner();

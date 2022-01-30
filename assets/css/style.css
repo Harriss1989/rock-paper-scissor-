@@ -371,3 +371,9 @@ img {
 #player-choice > img {
     height: 100px;
 }
+#computer-choice {
+    height: 200px;
+}
+#computer-choice > img {
+    height: 100px;
+}
