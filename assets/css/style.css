@@ -61,7 +61,7 @@ h4 {
 }
 
 img {
-    margin-top: 1rem;
+    margin-top: 3rem;
     height: 150px;
 }
 
@@ -91,7 +91,7 @@ img {
 }
 
 #main-menu {
-    margin: 20px auto 0;
+    margin: 80px auto 0;
     display: block;
     width: fit-content;
 }
@@ -211,10 +211,6 @@ img {
     animation-duration: 3s;
 }
 
-.selection {
-    /* display: flex;
-    justify-content: center; */
-}
 
 .selection {
     background: none;
@@ -314,24 +310,34 @@ img {
 
 .grid-container>div {
     text-align: center;
-    padding: 20px 0;
+    padding: 9px 16px;
     font-size: 30px;
+    margin-top: 130px;
 }
 
 .grid-item1 {
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 70%;
     grid-area: scores;
+    background: #fbfbfbc2;
+    border-radius: 30%;
+    box-shadow: 1px 1px 16px 5px black
 }
+
+
+
 
 .grid-item2 {
     height: 100%;
     width: 100%;
     grid-area: player;
+    background: #fbfbfbc2;
+    border-radius: 31%;
+    box-shadow: 1px 1px 16px 6px black;
 }
 
 .grid-item3 {
-    height: 100%;
+    height: 40%;
     width: 100%;
     grid-area: vs;
 }
@@ -340,6 +346,9 @@ img {
     height: 100%;
     width: 100%;
     grid-area: computer;
+    background: #fbfbfbc2;
+    border-radius: 31%;
+    box-shadow: 1px 1px 16px 6px black;
 }
 
 .grid-item5 {
@@ -361,9 +370,12 @@ img {
 }
 
 .grid-item8 {
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 90%;
     grid-area: result;
+    background: #fbfbfbc2;
+    border-radius: 15%;
+    box-shadow: 1px 1px 16px 6px black;
 }
 #player-choice {
     height: 200px;
@@ -376,4 +388,7 @@ img {
 }
 #computer-choice > img {
     height: 100px;
+}
+#player-score, #computer-score {
+    color: blue;
 }

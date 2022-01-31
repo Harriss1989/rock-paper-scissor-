@@ -3,6 +3,14 @@ let mainContainer = `<div class="btn-container">
 <button id="rules" class="btn-main">Game Rules</button>
 <button id="settings" class="btn-main">Settings</button>
 </div>`;
+let winningMessage = `<div id="winner-message" class='winner-model'>
+<div class="winner-modal-content>
+<div class="modal-header><span class="closeBtn">&times;</span>
+<h2>Congratulations</h2></div>
+</div>
+<div><p>Well Done you beat the computer!!</p></div>
+<div><button id="main-menu" class="btn-main">Main Menu</button></div>
+</div>`
 let beach = backgrounds[0];
 let space = backgrounds[1];
 let playground = backgrounds[2];
@@ -53,6 +61,8 @@ function outsideClick(e) {
     }
 }
 
+
+
 function openEachModal(e) {
     if (e.target == document.getElementById('rules')) {
         rulesModal.style.display = 'block';
@@ -62,7 +72,13 @@ function openEachModal(e) {
         roundWanted();
     }
 }
-
+//  let input = document.querySelector('.name');
+//     input.addEventListener('keydown', (e) => { 
+//         if (e.keyCode === 13) { 
+//            e.preventDefault();
+//            startGameScreen();
+//         }
+//     });
 function playerName() {
     modal.style.display = 'block';
     let name = document.getElementById('name');
@@ -108,7 +124,7 @@ function backgroundChange() {
             applyBackground(beach, primary, secondary, text);
         } else if (arenaChoice == 'window-bg') {
             let primary = '#031f3e';
-            let secondary ='#333333f7';
+            let secondary = '#333333f7';
             let text = '#ffffff';
             applyBackground(space, primary, secondary, text);
         }
@@ -117,8 +133,8 @@ function backgroundChange() {
 
 };
 
-function roundWanted(){
-    document.getElementById("round-slider").addEventListener('input', function(){
+function roundWanted() {
+    document.getElementById("round-slider").addEventListener('input', function () {
         roundsNeeded = document.getElementById('round-slider').value;
         document.getElementById('rounds-wanted').innerText = roundsNeeded;
     })
@@ -144,7 +160,7 @@ function startGameScreen() {
     <div class="grid-item7"><img class="selection" id="scissors" src="/assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors"></div>
     <div class="grid-item8"><h2>Result of Last Round: <span id="results"></span></h2></div>
     </div>
-   <div><button id="main-menu" class="btn-main">Main Menu</button></div>`; 
+   <div><button id="main-menu" class="btn-main">Main Menu</button></div>`;
     overallWinner = false;
     gameLoop();
     returnToMainScreen();
@@ -157,8 +173,8 @@ function gameLoop() {
 }
 
 function returnToMainScreen() {
-   let menuBtn = document.getElementById("main-menu");
-   menuBtn.addEventListener('click', mainMenu);
+    let menuBtn = document.getElementById("main-menu");
+    menuBtn.addEventListener('click', mainMenu);
 }
 
 
@@ -243,10 +259,12 @@ function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * computerOptions.length);
     let computerMove = computerOptions[randomChoice];
     if (computerMove == "rock") {
-        document.getElementById('computer-choice').innerHTML= '<img src="/assets/images/rock-hand.png" alt="3d hand in a fist represents rock">';
+        document.getElementById('computer-choice').innerHTML = '<img src="/assets/images/rock-hand.png" alt="3d hand in a fist represents rock">';
     } else if (computerMove == "paper") {
-        document.getElementById('computer-choice').innerHTML= '<img src="/assets/images/paper-hand.png" alt="3d hand flat represents paper">';
-    } else { document.getElementById('computer-choice').innerHTML= '<img src="/assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors">'};
+        document.getElementById('computer-choice').innerHTML = '<img src="/assets/images/paper-hand.png" alt="3d hand flat represents paper">';
+    } else {
+        document.getElementById('computer-choice').innerHTML = '<img src="/assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors">'
+    };
     computerChoice = computerMove;
     console.log('computer chose' + computerChoice)
     declareWinner();
@@ -262,6 +280,7 @@ function checkForOverallWinner() {
     } else if (parseInt(playerScore) == roundsNeeded) {
         // what happens when player wins 
         overallWinner = true
+        document.getElementById('winner-message').innerText= winningMessage.style.display ="block";
         console.log('player-wins')
     } else {
         console.log('no winner yet')
