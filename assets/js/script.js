@@ -3,25 +3,27 @@ let mainContainer = `<div class="btn-container">
 <button id="rules" class="btn-main">Game Rules</button>
 <button id="settings" class="btn-main">Settings</button>
 </div>`;
-let winningMessage = `<div id="winner-message" class='winner-model'>
-<div class="winner-modal-content>
-<div class="modal-header><span class="closeBtn">&times;</span>
+let winningMessage = `<div id="winner-message" class='model'>
+<div class="modal-content>
+<div class="modal-header"><span class="closeBtn">&times;</span>
 <h2>Congratulations</h2></div>
 </div>
-<div><p>Well Done you beat the computer!!</p></div>
+<div class="modal-body"><p>Well Done you beat the computer!!</p></div>
 <div><button id="main-menu" class="btn-main">Main Menu</button></div>
 </div>`
 let loserMessage = `<div id="loser-message" class='loser-model'>
-<div class="loser-modal-content>
-<div class="modal-header><span class="closeBtn">&times;</span>
+<div class="modal-content>
+<div class="modal-header"><span class="closeBtn">&times;</span>
 <h2>Unlucky better luck next time</h2></div>
 </div>
-<div><p>You got outplayed by the computer!!</p></div>
+<div class="modal-body"><p>You got outplayed by the computer!!</p></div>
 <div><button id="main-menu" class="btn-main">Main Menu</button></div>
 </div>`
 let beach = backgrounds[0];
 let space = backgrounds[1];
 let playground = backgrounds[2];
+let winnerModal = document.getElementById('winner-message');
+let loserModal = document.getElementById('loser-message');
 let modal = document.getElementById('player-input-modal'); // Get modal element
 let gameModal = document.getElementById('selectionModal'); // Get game modal elements
 let rulesModal = document.getElementById('rules-container-modal'); // get rules modal
@@ -56,7 +58,9 @@ function mainMenu() {
 function closeModal() {
     modal.style.display = 'none';
     rulesModal.style.display = 'none';
-    settingsModal.style.display = 'none'
+    settingsModal.style.display = 'none';
+    winnerModal.style.display ="none";
+    loserModal.style.display ="none";
 };
 
 function outsideClick(e) {
@@ -158,7 +162,6 @@ function applyBackground(bg, primary, secondary, text) {
 }
 
 function startGameScreen() {
-    console.log('here')
     document.getElementById('menu-container').innerHTML = `<div id="main-game" class="grid-container">
     <div class="grid-item1"><h2>Scores<h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
     <div class="grid-item2"><h2>${userName}</h2><div id="player-choice"></div></div>
@@ -285,15 +288,20 @@ function checkForOverallWinner() {
     let playerScore = document.getElementById('player-score').innerText;
     if (parseInt(computerScore) == roundsNeeded) {
         //what happens when computer wins
+        document.getElementById('menu-container').innerHTML = `${loserMessage}`; 
         overallWinner = true
+        
         console.log('computer-wins')
     } else if (parseInt(playerScore) == roundsNeeded) {
-        // what happens when player wins 
+        // what happens when player wins
+        document.getElementById('menu-container').innerHTML = `${winningMessage}`; 
         overallWinner = true
+        
         console.log('player-wins')
     } else {
         console.log('no winner yet')
         gameLoop();
     }
+    closeModal()
 };
 window.onload = mainMenu();
