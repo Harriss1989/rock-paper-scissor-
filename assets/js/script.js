@@ -3,22 +3,6 @@ let mainContainer = `<div class="btn-container">
 <button id="rules" class="btn-main">Game Rules</button>
 <button id="settings" class="btn-main">Settings</button>
 </div>`;
-let winningMessage = `<div id="winner-message" class='model'>
-<div class="modal-content>
-<div class="modal-header"><span class="closeBtn">&times;</span>
-<h2>Congratulations</h2></div>
-</div>
-<div class="modal-body"><p>Well Done you beat the computer!!</p></div>
-<div><button id="main-menu" class="btn-main">Main Menu</button></div>
-</div>`
-let loserMessage = `<div id="loser-message" class='loser-model'>
-<div class="modal-content>
-<div class="modal-header"><span class="closeBtn">&times;</span>
-<h2>Unlucky better luck next time</h2></div>
-</div>
-<div class="modal-body"><p>You got outplayed by the computer!!</p></div>
-<div><button id="main-menu" class="btn-main">Main Menu</button></div>
-</div>`
 let beach = backgrounds[0];
 let space = backgrounds[1];
 let playground = backgrounds[2];
@@ -59,8 +43,8 @@ function closeModal() {
     modal.style.display = 'none';
     rulesModal.style.display = 'none';
     settingsModal.style.display = 'none';
-    winnerModal.style.display ="none";
-    loserModal.style.display ="none";
+    // winnerModal.style.display = 'none';
+    // loserModal.style.display = 'none';
 };
 
 function outsideClick(e) {
@@ -288,20 +272,21 @@ function checkForOverallWinner() {
     let playerScore = document.getElementById('player-score').innerText;
     if (parseInt(computerScore) == roundsNeeded) {
         //what happens when computer wins
-        document.getElementById('menu-container').innerHTML = `${loserMessage}`; 
+        document.getElementById('loser-message').innerHTML;
+        loserModal.style.display = "block";
         overallWinner = true
-        
+        closeModal()
         console.log('computer-wins')
     } else if (parseInt(playerScore) == roundsNeeded) {
         // what happens when player wins
-        document.getElementById('menu-container').innerHTML = `${winningMessage}`; 
-        overallWinner = true
-        
+        document.getElementById('winner-message').innerHTML;
+        winnerModal.style.display = "block";
+        overallWinner = true;
+        closeModal();
         console.log('player-wins')
     } else {
         console.log('no winner yet')
         gameLoop();
     }
-    closeModal()
 };
 window.onload = mainMenu();

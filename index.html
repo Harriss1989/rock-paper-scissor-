@@ -84,14 +84,37 @@
                     <img class="arena-img" id="window-bg" src="./assets/images/spaceshipwindow.svg" alt="" width="150px"
                         height="150px">
                     <label for="round-slider">Rounds Needed to Win</label>
-                    <input type="range" min="3" max="15" step="1" id="round-slider" value="5"><span id="rounds-wanted">5</span>  
+                    <input type="range" min="3" max="15" step="1" id="round-slider" value="5"><span
+                        id="rounds-wanted">5</span>
                 </div>
-                
             </div>
+        </div>
+        <div id="winner-message" class='modal'>
+            <div class="modal-content">
+                <div class="modal-header"><span class="closeBtn">&times;</span>
+                    <h2>Congratulations</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>Well Done you beat the computer!!</p>
+            </div>
+            <div><button id="main-menu" class="btn-main">Main Menu</button></div>
+        </div>
+        <div id="loser-message" class='modal'>
+            <div class="modal-content">
+                <div class="modal-header"><span class="closeBtn">&times;</span>
+                    <h2>Unlucky better luck next time</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>You got outplayed by the computer!!</p>
+            </div>
+            <div><button id="main-menu" class="btn-main">Main Menu</button></div>
         </div>
         <!--Svg background container-->
         <div id="background" class="background-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid slice" viewBox="0 0 2500 1600">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                preserveAspectRatio="xMidYMid slice" viewBox="0 0 2500 1600">
                 <defs>
                     <style>
                         .cls-1 {
@@ -1375,8 +1398,8 @@
         </div>
         <script src="./assets/js/svg.js"></script>
         <script src="./assets/js/script.js"></script>
-    </div> 
-   
+    </div>
+
 </body>
 
 </html>
