@@ -43,8 +43,8 @@ function closeModal() {
     modal.style.display = 'none';
     rulesModal.style.display = 'none';
     settingsModal.style.display = 'none';
-    // winnerModal.style.display = 'none';
-    // loserModal.style.display = 'none';
+    winnerModal.style.display = 'none';
+    loserModal.style.display = 'none';
 };
 
 function outsideClick(e) {
@@ -275,14 +275,12 @@ function checkForOverallWinner() {
         document.getElementById('loser-message').innerHTML;
         loserModal.style.display = "block";
         overallWinner = true
-        closeModal()
         console.log('computer-wins')
     } else if (parseInt(playerScore) == roundsNeeded) {
         // what happens when player wins
         document.getElementById('winner-message').innerHTML;
         winnerModal.style.display = "block";
         overallWinner = true;
-        closeModal();
         console.log('player-wins')
     } else {
         console.log('no winner yet')

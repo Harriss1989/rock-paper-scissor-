@@ -142,16 +142,7 @@ img {
 #menu-container {
    height: 100%;
 }
-.winner-modal {
-    display: none;
-    background-color: #f4f4f4;
-    margin: 20% auto;
-    padding: 20px;
-    width: 70%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-    animation-name: modalopen;
-    animation-duration: 3s;
-}
+
 .modal {
     display: none;
     position: fixed;
@@ -187,14 +178,18 @@ img {
 }
 
 .modal-body {
-    padding: 10px 20px;
+    padding: 10px 30px;
     color: var(--text-light);
 }
 
 .modal-body h3 {
     text-align: center;
 }
-
+.slider-container {
+    height: fit-content;
+    margin-left: 30%;
+}
+  
 /*keyfames*/
 /* look in to this */
 @keyframes modalopen {

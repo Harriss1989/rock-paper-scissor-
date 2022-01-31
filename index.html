@@ -76,41 +76,48 @@
                     <h2>Game settings</h2>
                 </div>
                 <div class="modal-body">
-                    <h3>Pick arena</h3>
+                    <h4>Pick Arena</h4>
                     <img class="arena-img" id="court-bg" src="./assets/images/basketball.svg" alt="" width="150px"
                         height="150px">
                     <img class="arena-img" id="beach-bg" src="./assets/images/summerbeach.svg" alt="summer beach"
                         width="150px" height="150px">
                     <img class="arena-img" id="window-bg" src="./assets/images/spaceshipwindow.svg" alt="" width="150px"
                         height="150px">
-                    <label for="round-slider">Rounds Needed to Win</label>
-                    <input type="range" min="3" max="15" step="1" id="round-slider" value="5"><span
-                        id="rounds-wanted">5</span>
+                    <div class="slider-container">
+                        <label class="slider-lable" for="round-slider">Rounds Needed to Win</label>
+                        <input class="slider" type="range" min="3" max="15" step="1" id="round-slider" value="5"><span
+                            id="rounds-wanted">5</span>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="winner-message" class='modal'>
             <div class="modal-content">
-                <div class="modal-header"><span class="closeBtn">&times;</span>
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span>
                     <h2>Congratulations</h2>
                 </div>
+                <div class="modal-body">
+                    <h4>YOU WIN!!</h4>
+                    <h4>Well Done you beat the computer!!</h4>
+                </div>
+
             </div>
-            <div class="modal-body">
-                <p>Well Done you beat the computer!!</p>
-            </div>
-            <div><button id="main-menu" class="btn-main">Main Menu</button></div>
         </div>
         <div id="loser-message" class='modal'>
             <div class="modal-content">
-                <div class="modal-header"><span class="closeBtn">&times;</span>
-                    <h2>Unlucky better luck next time</h2>
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span>
+                    <h2>Unlucky,better luck next time</h2>
                 </div>
+                <div class="modal-body">
+                    <h4>YOU LOSE!!</h4>
+                    <h4>You got outplayed by the computer!!</h4>
+                </div>
+
             </div>
-            <div class="modal-body">
-                <p>You got outplayed by the computer!!</p>
-            </div>
-            <div><button id="main-menu" class="btn-main">Main Menu</button></div>
         </div>
+
         <!--Svg background container-->
         <div id="background" class="background-svg">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
