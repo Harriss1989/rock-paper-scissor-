@@ -152,9 +152,9 @@ function startGameScreen() {
     <div class="grid-item3"><h2>V.S</h2></div>
     <div class="grid-item4"><h2>Computer</h2><div id="computer-choice"></div></div>
     
-    <div class="grid-item5"><img class="selection" id="rock" src="/assets/images/rock-hand.png" alt="3d hand in a fist represents rock"></div>
-    <div class="grid-item6"><img class="selection" id="paper" src="/assets/images/paper-hand.png" alt="3d hand flat represents paper"></div>
-    <div class="grid-item7"><img class="selection" id="scissors" src="/assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors"></div>
+    <div class="grid-item5"><img class="selection" id="rock" src="./assets/images/rock-hand.png" alt="3d hand in a fist represents rock"></div>
+    <div class="grid-item6"><img class="selection" id="paper" src="./assets/images/paper-hand.png" alt="3d hand flat represents paper"></div>
+    <div class="grid-item7"><img class="selection" id="scissors" src="./assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors"></div>
     <div class="grid-item8"><h2>Result of Last Round: <span id="results"></span></h2></div>
     </div>
    <div><button id="main-menu" class="btn-main">Main Menu</button></div>`;
