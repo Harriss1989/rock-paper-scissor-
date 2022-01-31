@@ -11,6 +11,14 @@ let winningMessage = `<div id="winner-message" class='winner-model'>
 <div><p>Well Done you beat the computer!!</p></div>
 <div><button id="main-menu" class="btn-main">Main Menu</button></div>
 </div>`
+let loserMessage = `<div id="loser-message" class='loser-model'>
+<div class="loser-modal-content>
+<div class="modal-header><span class="closeBtn">&times;</span>
+<h2>Unlucky better luck next time</h2></div>
+</div>
+<div><p>You got outplayed by the computer!!</p></div>
+<div><button id="main-menu" class="btn-main">Main Menu</button></div>
+</div>`
 let beach = backgrounds[0];
 let space = backgrounds[1];
 let playground = backgrounds[2];
@@ -72,21 +80,22 @@ function openEachModal(e) {
         roundWanted();
     }
 }
-//  let input = document.querySelector('.name');
-//     input.addEventListener('keydown', (e) => { 
-//         if (e.keyCode === 13) { 
-//            e.preventDefault();
-//            startGameScreen();
-//         }
-//     });
+ 
 function playerName() {
     modal.style.display = 'block';
     let name = document.getElementById('name');
     let nameScreenStartBtn = document.getElementById('start-game');
     nameScreenStartBtn.addEventListener('click', captureUserName);
+    let input = document.querySelector('.name');
+    input.addEventListener('keydown', (e) => {
+        if (e.keyCode === 13){
+            captureUserName(e);
+        };
+    });
 
     function captureUserName(e) {
         e.preventDefault();
+
         if (name.value == '') {
             userName = 'Player';
             startGameScreen();
@@ -149,6 +158,7 @@ function applyBackground(bg, primary, secondary, text) {
 }
 
 function startGameScreen() {
+    console.log('here')
     document.getElementById('menu-container').innerHTML = `<div id="main-game" class="grid-container">
     <div class="grid-item1"><h2>Scores<h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
     <div class="grid-item2"><h2>${userName}</h2><div id="player-choice"></div></div>
@@ -280,7 +290,6 @@ function checkForOverallWinner() {
     } else if (parseInt(playerScore) == roundsNeeded) {
         // what happens when player wins 
         overallWinner = true
-        document.getElementById('winner-message').innerText= winningMessage.style.display ="block";
         console.log('player-wins')
     } else {
         console.log('no winner yet')

@@ -142,7 +142,16 @@ img {
 #menu-container {
    height: 100%;
 }
-
+.winner-modal {
+    display: none;
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 3s;
+}
 .modal {
     display: none;
     position: fixed;
@@ -241,21 +250,6 @@ img {
     align-items: center;
 
 }
-
-/* .result-score {
-    margin-left: .1rem;
-    font-size: .8rem;
-    color: blue;
-}
-
-.result-selection {
-    opacity: .5;
-}
-
-.result-selection.winner {
-    opacity: 1;
-    font-size: 1.5rem;
-} */
 
 #main-game {
     margin: 0 auto;
