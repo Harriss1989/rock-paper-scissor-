@@ -26,19 +26,22 @@
         <!--player-input-modal-->
         <div id="player-input-modal" class="modal">
             <div class="modal-content" id="form-style">
-                <div class="modal-header">
-                    <span class="closeBtn">&times;</span>
-                    <h2 class="start-h2">Start Game</h2>
-                </div>
-                <form id="form">
-                    <div class="form-layout">
-                        <label for="name">Enter Your Name:</label>
-                        <input type="text" class="name" id="name" name="name" placeholder="Player Name" maxlength="10">
+                <section>
+                    <div class="modal-header">
+                        <span class="closeBtn">&times;</span>
+                        <h2 class="start-h2">Start Game</h2>
                     </div>
-                    <div>
-                        <submit type="submit" id="start-game" class="btn-start">Start Game</submit>
-                    </div>
-                </form>
+                    <form id="form">
+                        <span class="form-layout">
+                            <label for="name">Enter Your Name:</label>
+                            <input type="text" class="name" id="name" name="name" placeholder="Player Name"
+                                maxlength="10">
+                        </span>
+                        <span class="submit-btn">
+                            <submit type="submit" id="start-game" class="btn-start">Start Game</submit>
+                        </span>
+                    </form>
+                </section>
             </div>
         </div>
         <!--rules modle-->
@@ -84,12 +87,9 @@
                 </div>
                 <div class="modal-body">
                     <h4>Pick Arena</h4>
-                    <img class="arena-img" id="court-bg" src="./assets/images/basketball.svg" alt="" width="150px"
-                        height="150px">
-                    <img class="arena-img" id="beach-bg" src="./assets/images/summerbeach.svg" alt="summer beach"
-                        width="150px" height="150px">
-                    <img class="arena-img" id="window-bg" src="./assets/images/spaceshipwindow.svg" alt="" width="150px"
-                        height="150px">
+                    <img class="arena-img" id="court-bg" src="./assets/images/basketball.svg" alt="basket ball court" height="150px" width="150">
+                    <img class="arena-img" id="beach-bg" src="./assets/images/summerbeach.svg" alt="summer beach" >
+                    <img class="arena-img" id="window-bg" src="./assets/images/spaceshipwindow.svg"alt="space ship window">
                     <div class="slider-container">
                         <label class="slider-lable" for="round-slider">Rounds Needed to Win</label>
                         <input class="slider" type="range" min="3" max="15" step="1" id="round-slider" value="5"><span
@@ -127,7 +127,7 @@
             </div>
         </div>
         <!--Svg background container-->
-        <div id="background" class="background-svg">
+        <div id="background-img" class="background-svg">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 preserveAspectRatio="xMidYMid slice" viewBox="0 0 2500 1600">
                 <defs>

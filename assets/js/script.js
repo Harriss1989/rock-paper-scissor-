@@ -1,7 +1,7 @@
 // Main screen veribale
 let mainContainer = 
 `<div class="btn-container">
-<div class="title"><h1>Rock, Paper, Scissors</h1></div>
+<div class="game-title"><h1>Rock, Paper, Scissors</h1></div>
 <button id="new-game" class="btn-main">New Game</button>
 <button id="rules" class="btn-main">Game Rules</button>
 <button id="settings" class="btn-main">Settings</button>
@@ -131,7 +131,7 @@ function backgroundChange() {
 };
 
 function applyBackground(bg, primary, secondary, text) {
-    document.getElementById('background').innerHTML = bg;
+    document.getElementById('background-img').innerHTML = bg;
     document.querySelector(':root').style.setProperty('--primary', primary);
     document.querySelector(':root').style.setProperty('--secondary', secondary);
     document.querySelector(':root').style.setProperty('--text-header', text);
