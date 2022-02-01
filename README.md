@@ -46,21 +46,22 @@ Main game Wireframe - [View](/assets/wireframes/main-game.png)
 
 Winner screen Wireframe - [view](/assets/wireframes/winner-screen.png)
 
-Name entry Wireframe
+Name entry Wireframe - [view](/assets/wireframes/name-entry.png)
 ## Features
 
 Heading 
-* The logo is used through the site, I used "Mochiy Pop One" as this caught my eye as a very Mario style font, the blue and white color scheme is traditionally relatable to Super Mario colors, contrast was low so I changed to a darker background color and a lighter font color. 
-![image of heading used](/assets/images/heading.png)
+* The main page consists of a main heading simply letting the user know what game they are about to play all the font throught are the same "Supermercado One". I chose this as it felt to me to be retro game font. 
+
+![image of game title used](/assets/images/gametitle.png)
 
 Navigation
-* Navigation Menu, this features on all pages of the site. The position and style is consistent thought the three pages. A hover element is implemented and once the user clicks on desired page, a visual que of a red bottom border shows the user they have clicked on the right page. I used a solid bottom border to represent what page the user is currently on. The font used was the same as the heading keeping it consistent with the theme of the site.
-![navbar image](/assets/images/navbar.png)
+* Navigation, the game has a few navigational fetures, three buttons on the main page; New game, Rules and settings. Each button takes the player to its intended modal or game, a hover element is on all of the buttons the help the player visually see which button the are selecting. The settings, game rules and the winner/loser message has a close model function when the player either clicks ouside of the modal or on the x in the top right corner there is also a main menu button on the main game screen to take the player back to reset the game for another try at beating the computer.
 
-Footer
-* The Footer has social media links and a copyright for Nintendo, they are consistent on all pages, I added the social media links for extra resources for the user, all the links take the user to a Super Mario inspired page.
-![Footer image](/assets/images/footer.png)
+![image of main buttons](/assets/images/mainbutton-nohover.png)
 
+![image of main buttons with hover](/assets/images/mainbutton-withhover.png)
+
+* 
 Super Mario Main page
 * The main page of the site has a hero image Which I use across two of the three pages keeping it familiar to the user. The page also consists of two text fields, the first gives a brief history of where the games started to how they evolved through out the years, whilst the second is a time-line list from the first title in the series to current day. It also states which console those title was realised for.
 ![Text field 1](/assets/images/textfield1.png)
