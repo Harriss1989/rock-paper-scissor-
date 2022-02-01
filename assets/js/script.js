@@ -1,5 +1,7 @@
 // Main screen veribale
-let mainContainer = `<div class="btn-container">
+let mainContainer = 
+`<div class="btn-container">
+<div class="title"><h1>Rock, Paper, Scissors</h1></div>
 <button id="new-game" class="btn-main">New Game</button>
 <button id="rules" class="btn-main">Game Rules</button>
 <button id="settings" class="btn-main">Settings</button>
@@ -22,7 +24,7 @@ let computerChoice = "";
 let roundWinner = '';
 let bgArenaPick = '';
 
-//main game function
+//main menu function
 function mainMenu() {
     document.getElementById('menu-container').innerHTML = mainContainer;
     let modalBtn = document.getElementById('new-game'); // Get open modal buttons
@@ -34,7 +36,7 @@ function mainMenu() {
     for (let btn of closeBtns) {
         btn.addEventListener('click', closeModal);
     }
-    window.addEventListener('click', outsideClick);
+    window.addEventListener('click', outsideClick); // listens for outside window click
     rulesBtn.addEventListener('click', openEachModal); //listen for rules button click
     settingsBtn.addEventListener('click', openEachModal); // listen for settings button click
 };
@@ -54,6 +56,10 @@ function outsideClick(e) {
         rulesModal.style.display = 'none';
     } else if (e.target == settingsModal) {
         settingsModal.style.display = 'none';
+    } else if (e.target == winnerModal) {
+        winnerModal.style.display = 'none';
+    } else if (e.target == loserModal) {
+        loserModal.style.display = 'none';
     }
 }
 
@@ -99,7 +105,6 @@ function backgroundChange() {
     let arenaPick = document.getElementsByClassName("arena-img");
     for (let i = 0; i < arenaPick.length; i++) {
         arenaPick[i].addEventListener('click', selectedBackground);
-        console.log('add el 1' + i);
     }
 
     function selectedBackground(e) {
@@ -217,7 +222,7 @@ function declareWinner() {
     }
 };
 
-// Determins what choice player has choosen, inserts choice in to main game
+// Determins what choice player has choosen by mouse click, inserts choice in to main game
 function getPlayerChoice() {
     let playerOptions = document.getElementsByClassName('selection');
     for (let i = 0; i < playerOptions.length; i++) {
@@ -259,7 +264,7 @@ function getComputerChoice() {
     declareWinner();
 };
 
-// checks for over all winner and displys message based on rounds won win or lose
+// checks for over all winner and displys message based on rounds won, win or lose
 function checkForOverallWinner() {
     let computerScore = document.getElementById('computer-score').innerText;
     let playerScore = document.getElementById('player-score').innerText;

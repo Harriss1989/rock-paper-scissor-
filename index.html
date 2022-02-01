@@ -7,28 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper,scissors</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href=".assets/images/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/site.webmanifest" crossorigin="use-credentials">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="mask-icon" href="./assets/images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
 </head>
 
 <body>
+    <!-- Main website page container -->
     <div class="page-container">
-        <!--new game button-->
+        <!--menu container to hold buttons for main menu-->
         <div id="menu-container"></div>
-        <!--new game modal-->
+        <!--player-input-modal-->
         <div id="player-input-modal" class="modal">
             <div class="modal-content" id="form-style">
                 <div class="modal-header">
                     <span class="closeBtn">&times;</span>
                     <h2 class="start-h2">Start Game</h2>
                 </div>
-
                 <form id="form">
                     <div class="form-layout">
                         <label for="name">Enter Your Name:</label>
@@ -97,6 +98,7 @@
                 </div>
             </div>
         </div>
+        <!--winner message modal-->
         <div id="winner-message" class='modal'>
             <div class="modal-content">
                 <div class="modal-header">
@@ -110,6 +112,7 @@
 
             </div>
         </div>
+        <!--loser message modal-->
         <div id="loser-message" class='modal'>
             <div class="modal-content">
                 <div class="modal-header">
@@ -123,7 +126,6 @@
 
             </div>
         </div>
-
         <!--Svg background container-->
         <div id="background" class="background-svg">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
