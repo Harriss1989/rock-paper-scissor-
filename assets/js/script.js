@@ -1,11 +1,12 @@
+// Main screen veribale
 let mainContainer = `<div class="btn-container">
 <button id="new-game" class="btn-main">New Game</button>
 <button id="rules" class="btn-main">Game Rules</button>
 <button id="settings" class="btn-main">Settings</button>
 </div>`;
-let beach = backgrounds[0];
-let space = backgrounds[1];
-let playground = backgrounds[2];
+let beach = backgrounds[0];// Svg beach defalt background
+let space = backgrounds[1];// Svg space ship background
+let playground = backgrounds[2];// Svg basketball court backeground
 let winnerModal = document.getElementById('winner-message');
 let loserModal = document.getElementById('loser-message');
 let modal = document.getElementById('player-input-modal'); // Get modal element
@@ -24,7 +25,6 @@ let bgArenaPick = '';
 //main game function
 function mainMenu() {
     document.getElementById('menu-container').innerHTML = mainContainer;
-    console.log("loaded");
     let modalBtn = document.getElementById('new-game'); // Get open modal buttons
     let closeBtns = document.getElementsByClassName('closeBtn'); // Close modal 
     let rulesBtn = document.getElementById('rules'); // rules button
@@ -57,8 +57,6 @@ function outsideClick(e) {
     }
 }
 
-
-
 function openEachModal(e) {
     if (e.target == document.getElementById('rules')) {
         rulesModal.style.display = 'block';
@@ -68,7 +66,7 @@ function openEachModal(e) {
         roundWanted();
     }
 }
- 
+ //Enter name fuction and key down functionallity
 function playerName() {
     modal.style.display = 'block';
     let name = document.getElementById('name');
@@ -96,9 +94,8 @@ function playerName() {
     }
 }
 
-
+// Change background funcion selects the color scheme for each background
 function backgroundChange() {
-    console.log('arena pick')
     let arenaPick = document.getElementsByClassName("arena-img");
     for (let i = 0; i < arenaPick.length; i++) {
         arenaPick[i].addEventListener('click', selectedBackground);
@@ -111,8 +108,7 @@ function backgroundChange() {
             let primary = '#f4b10b';
             let secondary = '#333333f7';
             let text = '#000000';
-            let box = '0px 20px 30px 0px #f9f5ea'
-            applyBackground(playground, primary, secondary, text);
+            applyBackground(playground, primary, secondary, text,);
 
         } else if (arenaChoice == "beach-bg") {
             let primary = '#420707e0';
@@ -127,24 +123,24 @@ function backgroundChange() {
         }
 
     };
-
 };
-
-function roundWanted() {
-    document.getElementById("round-slider").addEventListener('input', function () {
-        roundsNeeded = document.getElementById('round-slider').value;
-        document.getElementById('rounds-wanted').innerText = roundsNeeded;
-    })
-}
 
 function applyBackground(bg, primary, secondary, text) {
     document.getElementById('background').innerHTML = bg;
     document.querySelector(':root').style.setProperty('--primary', primary);
     document.querySelector(':root').style.setProperty('--secondary', secondary);
     document.querySelector(':root').style.setProperty('--text-header', text);
+};
 
-}
+// function for how many rounds played
+function roundWanted() {
+    document.getElementById("round-slider").addEventListener('input', function () {
+        roundsNeeded = document.getElementById('round-slider').value;
+        document.getElementById('rounds-wanted').innerText = roundsNeeded;
+    })
+};
 
+// main game input 
 function startGameScreen() {
     document.getElementById('menu-container').innerHTML = `<div id="main-game" class="grid-container">
     <div class="grid-item1"><h2>Scores<h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
@@ -163,20 +159,19 @@ function startGameScreen() {
     returnToMainScreen();
 }
 
-
+// Game loop function
 function gameLoop() {
-    console.log('gameloop')
     getPlayerChoice();
 }
 
+// Return to main menu screen from game screen
 function returnToMainScreen() {
     let menuBtn = document.getElementById("main-menu");
     menuBtn.addEventListener('click', mainMenu);
 }
 
-
+// Update score function keep track of whos winning
 function updateScore() {
-    console.log('started update score')
     if (roundWinner == 'player') {
         let currentPlayerScore = document.getElementById('player-score').innerText;
         let updatePlayerScore = parseInt(currentPlayerScore) + 1;
@@ -195,36 +190,8 @@ function updateScore() {
     }
 };
 
-
-function getPlayerChoice() {
-    console.log('player choice')
-    let playerOptions = document.getElementsByClassName('selection');
-    for (let i = 0; i < playerOptions.length; i++) {
-        playerOptions[i].addEventListener('click', identifyPlayerClick);
-        console.log('add el' + i)
-    }
-
-    function identifyPlayerClick(e) {
-        let userChoice = e.target.src
-        let userMove = e.target.id
-        document.getElementById('player-choice').innerHTML = `<img src="${userChoice}">`;
-        playerChoice = userMove;
-        console.log(playerChoice)
-        removePlayerClick();
-        getComputerChoice();
-    };
-
-    function removePlayerClick() {
-        for (let i = 0; i < playerOptions.length; i++) {
-            playerOptions[i].removeEventListener('click', identifyPlayerClick);
-            console.log('- el' + i)
-        };
-    };
-};
-
+// Game logic 
 function declareWinner() {
-    console.log(playerChoice);
-    console.log(computerChoice);
     switch (playerChoice + computerChoice) {
         case 'rockpaper':
         case 'scissorsrock':
@@ -250,8 +217,34 @@ function declareWinner() {
     }
 };
 
+// Determins what choice player has choosen, inserts choice in to main game
+function getPlayerChoice() {
+    let playerOptions = document.getElementsByClassName('selection');
+    for (let i = 0; i < playerOptions.length; i++) {
+        playerOptions[i].addEventListener('click', identifyPlayerClick);
+        console.log('add el' + i)
+    }
+
+    function identifyPlayerClick(e) {
+        let userChoice = e.target.src
+        let userMove = e.target.id
+        document.getElementById('player-choice').innerHTML = `<img src="${userChoice}">`;
+        playerChoice = userMove;
+        console.log(playerChoice)
+        removePlayerClick();
+        getComputerChoice();
+    };
+
+    function removePlayerClick() {
+        for (let i = 0; i < playerOptions.length; i++) {
+            playerOptions[i].removeEventListener('click', identifyPlayerClick);
+            console.log('- el' + i)
+        };
+    };
+};
+
+// Randomly pick for computer inserts choice
 function getComputerChoice() {
-    console.log('started computer choice');
     let computerOptions = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random() * computerOptions.length);
     let computerMove = computerOptions[randomChoice];
@@ -263,10 +256,10 @@ function getComputerChoice() {
         document.getElementById('computer-choice').innerHTML = '<img src="./assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors">'
     };
     computerChoice = computerMove;
-    console.log('computer chose' + computerChoice)
     declareWinner();
 };
 
+// checks for over all winner and displys message based on rounds won win or lose
 function checkForOverallWinner() {
     let computerScore = document.getElementById('computer-score').innerText;
     let playerScore = document.getElementById('player-score').innerText;
@@ -275,15 +268,12 @@ function checkForOverallWinner() {
         document.getElementById('loser-message').innerHTML;
         loserModal.style.display = "block";
         overallWinner = true
-        console.log('computer-wins')
     } else if (parseInt(playerScore) == roundsNeeded) {
         // what happens when player wins
         document.getElementById('winner-message').innerHTML;
         winnerModal.style.display = "block";
         overallWinner = true;
-        console.log('player-wins')
     } else {
-        console.log('no winner yet')
         gameLoop();
     }
 };
