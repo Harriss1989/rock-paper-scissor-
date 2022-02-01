@@ -1,108 +1,177 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock, Paper, Scissors Game
+## Introduction 
+The classic school playground game we all played one time as kids, rock, paper, scissor setteled any argument.Play this classic game agenst the computer and see if you got what it takes to win.This game is for anyone looking for a quick 10 minutes of fun or to keep ur kids entertained whilst you do the washing up.
 
-Welcome Harriss1989,
+![responsive](./assets/images/responsive.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Link to live site](https://harriss1989.github.io/rock-paper-scissor-game/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## User Experience (UX)
+* User stories
+* Visitor Goals
+    * When visiting this site, I want to be able to navigate easily, from the main title to the main game and back again.
 
-## Gitpod Reminders
+    * When visiting this site, I want to be able to easily find out about the games and have diffrent level of difficalty.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+    * When visiting this site, I would like to find information about the game im plying e.g game rulse 
 
-`python3 -m http.server`
+# Structure
+The game site consists of one main page, the player has the option to change arena background and select rounds for a minimum of 3 to a max of 15 giving the player added dificulty.
+# Design
+The game site design i kept simple, one page that houses all of the game functonallity in a simple easy to use menu. There are three buttons on the main screen telling the user what each button does, i added functions to each of the buttons to bring up the relevent content by useing modals one for new game were the user can enter and submit there name, this will be visable in the game screen, a game rules button to explain the game, a settings button giving the user the option to change the background of the game arena and a round slider to pick how many rounds till the game is over for added difficulty. 
+## Google Fonts:
+Google fonts were used to import the "Supermercado One" font into the style.css file which is used throughout the Game and gradeintback up of sans-serif. 
 
-A blue button should appear to click: _Make Public_,
+# Colour Scheme
+### Background svg used
+I used svg for background images in the hope to add movment to the game to give the page an added element of fun. This task was a bit more than i can handel at the moment but i have keeped them in a seperate js file so to revisit this at a later date once my skills have improved. 
+![image Svg spaceship window used](/assets/images/spaceshipwindow.svg)
+![image Svg beach used](/assets/images/summerbeach.svg)
+![image Svg bascket ball court used](/assets/images/basketball.svg)
+### Colors used for elements in site
+![image of color gradient for elements in site](/assets/images/contrast.png)
 
-Another blue button should appear to click: _Open Browser_.
+## Balsamiq:
+Balsamiq was used to create the wireframes during the design process. I kept to the design throught the project keeping it simple for beter user experiance.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Main Page Wireframe - [View](/assets/wireframes/mainpage.png)
 
-A blue button should appear to click: _Make Public_,
+Mobile Wireframe - [View](/assets/wireframes/mobile-main-screen.png)
 
-Another blue button should appear to click: _Open Browser_.
+Settings page Wireframe - [View](/assets/wireframes/settings.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Rules page Wireframe - [View](/assets/wireframes/rules.png)
 
-To log into the Heroku toolbelt CLI:
+Main game Wireframe - [View](/assets/wireframes/main-game.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Winner screen Wireframe - [view](/assets/wireframes/winner-screen.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Name entry Wireframe
+## Features
 
-------
+Heading 
+* The logo is used through the site, I used "Mochiy Pop One" as this caught my eye as a very Mario style font, the blue and white color scheme is traditionally relatable to Super Mario colors, contrast was low so I changed to a darker background color and a lighter font color. 
+![image of heading used](/assets/images/heading.png)
 
-## Release History
+Navigation
+* Navigation Menu, this features on all pages of the site. The position and style is consistent thought the three pages. A hover element is implemented and once the user clicks on desired page, a visual que of a red bottom border shows the user they have clicked on the right page. I used a solid bottom border to represent what page the user is currently on. The font used was the same as the heading keeping it consistent with the theme of the site.
+![navbar image](/assets/images/navbar.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Footer
+* The Footer has social media links and a copyright for Nintendo, they are consistent on all pages, I added the social media links for extra resources for the user, all the links take the user to a Super Mario inspired page.
+![Footer image](/assets/images/footer.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Super Mario Main page
+* The main page of the site has a hero image Which I use across two of the three pages keeping it familiar to the user. The page also consists of two text fields, the first gives a brief history of where the games started to how they evolved through out the years, whilst the second is a time-line list from the first title in the series to current day. It also states which console those title was realised for.
+![Text field 1](/assets/images/textfield1.png)
+![Text field 2](/assets/images/textfield2.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Characters Page
+* The character page has five individual boxes with a little background information, and a list of their strengths and abilities that they are known for throughout the Super Mario Bros series. This is a page viewers can come to learn more about the iconic characters.
+![Bio page](/assets/images/biopage.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Sign Up Page
+* The sign-up page has a sign-up box for users to input their information to subscribe for the monthly Super Mario Bros newsletter which is sent out via email. As this is my first project the input does not record any personal information. The newsletter is intended to inform the subscriber of any news and events associated with Super Mario. Once a user inputs their information and hits the 'Here we go' button, they will then be taken to a thank you for signing up page. No newsletter will be sent out as this is for project purposes only.
+![Bio page](/assets/images/signup.png)
+![Bio page](/assets/images/thankyou.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Technologies Used
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* HTML5
+* CSS3
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Photos source
+ * https://www.vecteezy.com/
+ * https://www.istockphoto.com/
+ * https://www.pinterest.co.uk/
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+ To save on file space I ran all photos through https://tinypng.com/
+ 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Git
+Git was used for version control by utilizing the Gitpod terminal, to commit to Git and Push to GitHub.
+## GitHub:
+GitHub is used to store the projects code after being pushed from Git.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Testing
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Google Chrome Lighthouse Report
+* light house report desktop
+![light house report desktop](/assets/images/lighthousedesktop.png)
+* light house report mobile
+![light house report mobile](/assets/images/lighthousemobile.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Validator Reports
+* W3C Markup Validatorindex.html - [Results](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fharriss1989.github.io%2FHistory-of-SuperMario%2Findex.html)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* W3C Markup Validator characters.html - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fharriss1989.github.io%2FHistory-of-SuperMario%2Fcharacters.html)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+* W3C Markup Validator signup.html - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fharriss1989.github.io%2FHistory-of-SuperMario%2Fsignup.html)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* W3C Markup Validator yoursignedup- [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fharriss1989.github.io%2FHistory-of-SuperMario%2Fyoursignedup.html%3Ffname%3Dbenjamin%26lname%3Dharriss%26email%3Dharriss_1%2540hotmail.co.uk)
 
-------
+* W3C CSS Validator - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fharriss1989.github.io%2FHistory-of-SuperMario%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-## FAQ about the uptime script
+After checking course material I added aria-label to my hero-image and thankyou image, the validator is giving me a warning after talking to my mentor and trying a diffrent aria tag this then gave me a error so i reverted it back to just give a warning.
+### Accessibility Report
 
-**Why have you added this script?**
+* Wave Report - [Results](https://wave.webaim.org/report#/https://harriss1989.github.io/History-of-SuperMario/index.html)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Browsers Tested
+* Safari
+* Google Chrome
+* Microsoft Edge
+* Firefox
 
-**How will this affect me?**
+# Devices Tested
+* iPhone Xr 
+    * Safari - iOS 14.8.1 
+    * Chrome - version 95.0.4638.50
+* iPad 7th generation 
+    * Safari - iOS 14.8.1
+* iPhone 11 
+    * Safari - iOS 15.1
+* iPhone 11 pro max
+    * Safari - iOS 15.1
+* Apple MacBook Air 13"
+    * Chrome - Version 96.0.4664.55
+    * Safari - Version 15.1 (17612.2.9.1.20)
+    * Firefox -Version 94.0.2
+* Hp Laptop
+    * Microsoft Edge - version 96.0.1054.34 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+From these test above I ensured all the links and buttons worked correctly. I used the devices listed above to test the deployed site. I also used the devtools emulator to test the site at various sizes. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+# Deployment
+* The site was deployed to Github pages.the step to deploy are as follows:
+  * In the GitHub pages, navigate to the settings tab
+  * select the pages link from the setting menu on the left hand side 
+  * Under the GitHub pages from the source section drop-down menu, select the master branch
+  * Once the master branch has been selected,the page will be automatically refreshed
+  with a detailed ribbon display to indecate the successful deployment.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+ [Link to live site](https://harriss1989.github.io/History-of-SuperMario/)
+ 
+# Credits
+Media source
+ * https://www.vecteezy.com/
+ * https://www.istockphoto.com/
+ * https://www.pinterest.co.uk/
 
-**So….?**
+ The Favicon, links and meta code were generated by [Realfavicongenerator.net](https://realfavicongenerator.net)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+ Content
+ * I referenced mario.fandome to fact check the information. [mario.fandom.com](https://mario.fandom.com/wiki/MarioWiki)
+ * I referred to w3schools to check HTML and CSS syntax.
+ * I referred to CSS-Tricks to help me understand flexbox in more detail.
 
-**Can I opt out?**
+ ### Acknowledgments
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+ * A massive thank you to Shellie Downie for giving me the pep talk of my life, and for her constant reassurance when I was suffering with imposter syndrome. And for all the links she thought would help me understand more
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+ * Massive thank you to Matt Boddden who spent a lot of time helping me with positioning my form page correctly and for being a great support when I needed help. (You legend)
+ 
+ * The brilliant Slack community wish I used you sooner.
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

@@ -1,5 +1,5 @@
 // Main screen veribale
-let mainContainer = 
+let mainContainer= 
 `<div class="btn-container">
 <div class="game-title"><h1>Rock, Paper, Scissors</h1></div>
 <button id="new-game" class="btn-main">New Game</button>
@@ -39,7 +39,7 @@ function mainMenu() {
     window.addEventListener('click', outsideClick); // listens for outside window click
     rulesBtn.addEventListener('click', openEachModal); //listen for rules button click
     settingsBtn.addEventListener('click', openEachModal); // listen for settings button click
-};
+}
 
 function closeModal() {
     modal.style.display = 'none';
@@ -47,7 +47,7 @@ function closeModal() {
     settingsModal.style.display = 'none';
     winnerModal.style.display = 'none';
     loserModal.style.display = 'none';
-};
+}
 
 function outsideClick(e) {
     if (e.target == modal) {
@@ -82,7 +82,7 @@ function playerName() {
     input.addEventListener('keydown', (e) => {
         if (e.keyCode === 13){
             captureUserName(e);
-        };
+        }
     });
 
     function captureUserName(e) {
@@ -103,17 +103,17 @@ function playerName() {
 // Change background funcion selects the color scheme for each background
 function backgroundChange() {
     let arenaPick = document.getElementsByClassName("arena-img");
-    for (let i = 0; i < arenaPick.length; i++) {
+    for (let i = 0; i <arenaPick.length; i++) {
         arenaPick[i].addEventListener('click', selectedBackground);
     }
 
     function selectedBackground(e) {
-        let arenaChoice = e.target.id
+        let arenaChoice = e.target.id;
         if (arenaChoice == 'court-bg') {
             let primary = '#f4b10b';
             let secondary = '#333333f7';
             let text = '#000000';
-            applyBackground(playground, primary, secondary, text,);
+            applyBackground(playground, primary, secondary, text);
 
         } else if (arenaChoice == "beach-bg") {
             let primary = '#420707e0';
@@ -127,28 +127,28 @@ function backgroundChange() {
             applyBackground(space, primary, secondary, text);
         }
 
-    };
-};
+    }
+}
 
 function applyBackground(bg, primary, secondary, text) {
     document.getElementById('background-img').innerHTML = bg;
     document.querySelector(':root').style.setProperty('--primary', primary);
     document.querySelector(':root').style.setProperty('--secondary', secondary);
     document.querySelector(':root').style.setProperty('--text-header', text);
-};
+}
 
 // function for how many rounds played
 function roundWanted() {
     document.getElementById("round-slider").addEventListener('input', function () {
         roundsNeeded = document.getElementById('round-slider').value;
         document.getElementById('rounds-wanted').innerText = roundsNeeded;
-    })
-};
+    });
+}
 
 // main game input 
 function startGameScreen() {
     document.getElementById('menu-container').innerHTML = `<div id="main-game" class="grid-container">
-    <div class="grid-item1"><h2>Scores<h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
+    <div class="grid-item1"><h2>Scores</h2><h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
     <div class="grid-item2"><h2>${userName}</h2><div id="player-choice"></div></div>
     <div class="grid-item3"><h2>V.S</h2></div>
     <div class="grid-item4"><h2>Computer</h2><div id="computer-choice"></div></div>
@@ -225,7 +225,7 @@ function declareWinner() {
 // Determins what choice player has choosen by mouse click, inserts choice in to main game
 function getPlayerChoice() {
     let playerOptions = document.getElementsByClassName('selection');
-    for (let i = 0; i < playerOptions.length; i++) {
+    for (let i = 0; i <playerOptions.length; i++) {
         playerOptions[i].addEventListener('click', identifyPlayerClick);
         console.log('add el' + i)
     }
@@ -241,7 +241,7 @@ function getPlayerChoice() {
     };
 
     function removePlayerClick() {
-        for (let i = 0; i < playerOptions.length; i++) {
+        for (let i = 0; i <playerOptions.length; i++) {
             playerOptions[i].removeEventListener('click', identifyPlayerClick);
             console.log('- el' + i)
         };
