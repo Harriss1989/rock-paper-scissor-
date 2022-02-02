@@ -28,6 +28,15 @@ body {
     width: 100vw;
 }
 
+.nojs>p {
+    border: 2px solid red;
+    border-radius: 5px;
+    width: max(260px, 35%);
+    background: white;
+    margin: 25% auto;
+    padding: 1em;
+}
+
 /* Image stylings*/
 .start-h2 {
     font-size: 1em;
@@ -464,8 +473,9 @@ img {
     .grid-container>div {
         text-align: center;
         font-size: 16px;
-        
+
     }
+
     img {
         margin-top: 1rem;
     }
@@ -492,9 +502,11 @@ img {
     #form {
         padding: 35px;
     }
+
     .grid-item8 {
         padding: 10px;
     }
+
     .grid-item2 {
         width: 144%;
     }
@@ -520,28 +532,34 @@ img {
     .form-layout {
         padding: 0%;
     }
+
     .grid-container>div {
-        font-size: 13px;  
+        font-size: 13px;
     }
 }
-@media screen and (max-width: 380px) {
-   img {
-    height: 99px;
-   }
-   #computer-choice img {
-    height: 85px;
-   }
-   #player-choice img {
-       height: 85px;
-   }
-   .grid-item8 {
-       font-size: 10px;
-   }
-   .grid-container>div {
-    font-size: 11px;  
-}
-}
 
+@media screen and (max-width: 380px) {
+    img {
+        height: 99px;
+    }
+
+    #computer-choice img {
+        height: 85px;
+    }
+
+    #player-choice img {
+        height: 85px;
+    }
+
+    .grid-item8 {
+        font-size: 10px;
+    }
+
+    .grid-container>div {
+        font-size: 11px;
+    }
+
+}
 
 @media screen and (max-width: 350px) {
 

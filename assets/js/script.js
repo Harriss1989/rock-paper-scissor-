@@ -263,12 +263,10 @@ function checkForOverallWinner() {
     let playerScore = document.getElementById('player-score').innerText;
     if (parseInt(computerScore) == roundsNeeded) {
         //what happens when computer wins
-        // document.getElementById('loser-message').innerHTML;
         loserModal.style.display = "block";
         overallWinner = true;
     } else if (parseInt(playerScore) == roundsNeeded) {
         // what happens when player wins
-        // document.getElementById('winner-message').innerHTML;
         winnerModal.style.display = "block";
         overallWinner = true;
     } else {
