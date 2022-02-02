@@ -12,17 +12,15 @@ let playground = backgrounds[2];// Svg basketball court backeground
 let winnerModal = document.getElementById('winner-message');
 let loserModal = document.getElementById('loser-message');
 let modal = document.getElementById('player-input-modal'); // Get modal element
-let gameModal = document.getElementById('selectionModal'); // Get game modal elements
 let rulesModal = document.getElementById('rules-container-modal'); // get rules modal
 let settingsModal = document.getElementById('game-settings-modal'); // get settings modal
 let userName = ""; // User name input empty string
-let startBtn = document.getElementById('start-game'); // start game button
 let overallWinner = false;
 let roundsNeeded = 5;
 let playerChoice = "";
 let computerChoice = "";
 let roundWinner = '';
-let bgArenaPick = '';
+
 
 //main menu function
 function mainMenu() {
@@ -193,7 +191,7 @@ function updateScore() {
         document.getElementById('results').innerText = 'Draw';
         checkForOverallWinner();
     }
-};
+}
 
 // Game logic 
 function declareWinner() {
@@ -217,7 +215,7 @@ function declareWinner() {
             updateScore();
             break;
     }
-};
+}
 
 // Determins what choice player has choosen by mouse click, inserts choice in to main game
 function getPlayerChoice() {
@@ -227,22 +225,21 @@ function getPlayerChoice() {
     }
 
     function identifyPlayerClick(e) {
-        let userChoice = e.target.src
-        let userMove = e.target.id
+        let userChoice = e.target.src;
+        let userMove = e.target.id;
         document.getElementById('player-choice').innerHTML = `<img src="${userChoice}">`;
         playerChoice = userMove;
-        console.log(playerChoice)
         removePlayerClick();
         getComputerChoice();
-    };
+    }
 
     function removePlayerClick() {
         for (let i = 0; i <playerOptions.length; i++) {
             playerOptions[i].removeEventListener('click', identifyPlayerClick);
-            console.log('- el' + i)
-        };
-    };
-};
+            console.log('- el' + i);
+        }
+    }
+}
 
 // Randomly pick for computer inserts choice
 function getComputerChoice() {
@@ -254,11 +251,11 @@ function getComputerChoice() {
     } else if (computerMove == "paper") {
         document.getElementById('computer-choice').innerHTML = '<img src="./assets/images/paper-hand.png" alt="3d hand flat represents paper">';
     } else {
-        document.getElementById('computer-choice').innerHTML = '<img src="./assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors">'
-    };
+        document.getElementById('computer-choice').innerHTML = '<img src="./assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors">';
+    }
     computerChoice = computerMove;
     declareWinner();
-};
+}
 
 // checks for over all winner and displys message based on rounds won, win or lose
 function checkForOverallWinner() {
@@ -266,16 +263,16 @@ function checkForOverallWinner() {
     let playerScore = document.getElementById('player-score').innerText;
     if (parseInt(computerScore) == roundsNeeded) {
         //what happens when computer wins
-        document.getElementById('loser-message').innerHTML;
+        // document.getElementById('loser-message').innerHTML;
         loserModal.style.display = "block";
-        overallWinner = true
+        overallWinner = true;
     } else if (parseInt(playerScore) == roundsNeeded) {
         // what happens when player wins
-        document.getElementById('winner-message').innerHTML;
+        // document.getElementById('winner-message').innerHTML;
         winnerModal.style.display = "block";
         overallWinner = true;
     } else {
         gameLoop();
     }
-};
+}
 window.onload = mainMenu();
