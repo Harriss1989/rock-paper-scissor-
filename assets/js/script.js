@@ -156,7 +156,7 @@ function startGameScreen() {
     <div class="grid-item7"><img class="selection" id="scissors" src="./assets/images/sicissor-hand.png" alt="3d hand two fingers up represents scissors"></div>
     <div class="grid-item8"><h2>Result of Last Round: <span id="results"></span></h2></div>
     </div>
-   <div><button id="main-menu" class="btn-main">Main Menu</button></div>`;
+   <div class="main-menu-btn"><button id="main-menu" class="btn-main">Main Menu</button></div>`;
     overallWinner = false;
     gameLoop();
     returnToMainScreen();
