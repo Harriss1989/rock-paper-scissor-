@@ -6,9 +6,9 @@ let mainContainer=
 <button id="rules" class="btn-main">Game Rules</button>
 <button id="settings" class="btn-main">Settings</button>
 </div>`;
-let beach = backgrounds[0];// Svg beach defalt background
-let space = backgrounds[1];// Svg space ship background
-let playground = backgrounds[2];// Svg basketball court backeground
+let beach = 'url(./assets/images/summerbeach.svg)';// Svg beach defalt background
+let space = 'url(./assets/images/spaceshipwindow.svg)';// Svg space ship background
+let playground = 'url(./assets/images/basketball.svg)';// Svg basketball court backeground
 let winnerModal = document.getElementById('winner-message');
 let loserModal = document.getElementById('loser-message');
 let modal = document.getElementById('player-input-modal'); // Get modal element
@@ -129,7 +129,7 @@ function backgroundChange() {
 }
 
 function applyBackground(bg, primary, secondary, text) {
-    document.getElementById('background-img').innerHTML = bg;
+    document.getElementsByTagName('body')[0].style.backgroundImage = bg;
     document.querySelector(':root').style.setProperty('--primary', primary);
     document.querySelector(':root').style.setProperty('--secondary', secondary);
     document.querySelector(':root').style.setProperty('--text-header', text);
