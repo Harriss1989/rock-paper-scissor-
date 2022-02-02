@@ -391,14 +391,11 @@ img {
 }
 
 
-/* media Querys 
-@media screen  and (min-width: 40em) {
-    .page-container {
-        width: 100%;
-        height: 100vh;
-    }
+/* media Querys */
+/* @media screen  and (min-width: 414px) {
+   
     #menu-container {
-        width: fit-content;
+        width: 100vh;
       
     }
-} */
+}  */

@@ -55,11 +55,16 @@ Heading
 ![image of game title used](/assets/images/gametitle.png)
 
 Navigation
-* Navigation, the game has a few navigational fetures, three buttons on the main page; New game, Rules and settings. Each button takes the player to its intended modal or game, a hover element is on all of the buttons the help the player visually see which button the are selecting. The settings, game rules and the winner/loser message has a close model function when the player either clicks ouside of the modal or on the x in the top right corner there is also a main menu button on the main game screen to take the player back to reset the game for another try at beating the computer.
+* Navigation, the game has a few navigational fetures, three buttons on the main page; New game, Rules and settings. Each button takes the player to its intended modal or game, a hover element is on all of the buttons that help the player visually see which button they are selecting. The settings, game rules and the winner/loser message has a close model function when the player either clicks ouside of the modal or on the x in the top right corner there is also a main menu button on the main game screen to take the player back to reset the game for another try at beating the computer.
 
 ![image of main buttons](/assets/images/mainbutton-nohover.png)
 
 ![image of main buttons with hover](/assets/images/mainbutton-withhover.png)
+
+![image of x button](/assets/images/backbutton.png)
+
+![image of main menu button](/assets/images/mainmenubtn.png)
+
 
 * 
 Super Mario Main page

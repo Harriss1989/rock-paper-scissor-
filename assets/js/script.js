@@ -202,21 +202,18 @@ function declareWinner() {
         case 'scissorsrock':
         case 'paperscissors':
             roundWinner = 'computer';
-            console.log('comp is winner')
             updateScore();
             break;
         case 'rockscissors':
         case 'paperrock':
         case 'scissorspaper':
             roundWinner = 'player';
-            console.log('player is winner')
             updateScore();
             break;
         case 'rockrock':
         case 'scissorsscissors':
         case 'paperpaper':
             roundWinner = 'draw';
-            console.log('its a draw')
             updateScore();
             break;
     }
@@ -227,7 +224,6 @@ function getPlayerChoice() {
     let playerOptions = document.getElementsByClassName('selection');
     for (let i = 0; i <playerOptions.length; i++) {
         playerOptions[i].addEventListener('click', identifyPlayerClick);
-        console.log('add el' + i)
     }
 
     function identifyPlayerClick(e) {
