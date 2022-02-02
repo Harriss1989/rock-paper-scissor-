@@ -65,7 +65,7 @@ Navigation
 
 ![image of main menu button](/assets/images/mainmenubtn.png)
 
-
+player name input modal
 * 
 Super Mario Main page
 * The main page of the site has a hero image Which I use across two of the three pages keeping it familiar to the user. The page also consists of two text fields, the first gives a brief history of where the games started to how they evolved through out the years, whilst the second is a time-line list from the first title in the series to current day. It also states which console those title was realised for.

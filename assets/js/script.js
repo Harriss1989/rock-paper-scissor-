@@ -146,7 +146,7 @@ function roundWanted() {
 // main game input 
 function startGameScreen() {
     document.getElementById('menu-container').innerHTML = `<div id="main-game" class="grid-container">
-    <div class="grid-item1"><h2>Scores</h2><h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3></h2><span></span></div>
+    <div class="grid-item1"><h2>Scores</h2><h3>Computer: <span id="computer-score">0</span></h3> <h3>${userName}: <span id="player-score">0</span></h3><span></span></div>
     <div class="grid-item2"><h2>${userName}</h2><div id="player-choice"></div></div>
     <div class="grid-item3"><h2>V.S</h2></div>
     <div class="grid-item4"><h2>Computer</h2><div id="computer-choice"></div></div>

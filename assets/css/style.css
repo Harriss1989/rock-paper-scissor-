@@ -495,10 +495,6 @@ img {
         margin: 75% auto;
     }
 
-    #form-style {
-        width: 0 auto;
-    }
-
     #form {
         padding: 35px;
     }
@@ -513,16 +509,10 @@ img {
 
 }
 
-
-
 @media screen and (max-width: 414px) {
 
     .modal-content {
         margin: 90% auto;
-    }
-
-    #form-style {
-        width: 0 auto;
     }
 
     #form {
@@ -565,10 +555,6 @@ img {
 
     .modal-content {
         margin: 90% auto;
-    }
-
-    #form-style {
-        width: 0 auto;
     }
 
     #form {
