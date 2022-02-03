@@ -67,7 +67,7 @@ Navigation
 ![image of main menu button](/assets/images/mainmenubtn.png)
 
 player name input modal
-* The player can input there name in to an input box and have there name displayed in the game. I have limited the number of letters a palyer can input so it does not interfere with the stylings of the game. The player after inputting there name can use the enter key i added this for better fuctionallity.
+* The player can input there name in to an input box and have there name displayed in the game. I have limited the number of letters a player can input so it does not interfere with the stylings of the game. The player after inputting their name can use the enter key I added this for better fuctionallity.
 
 ![image of input name field](/assets/images/playernameinput.png)
 
@@ -86,7 +86,7 @@ Settings modal
 ![image of space color theme](/assets/images/mainmenuspacetheme.png)
 
 The main game
-* Once the player has choosen their arena, selected the number of rounds and entered their name, the main game will start by pushing the start game button. The player chooses from one of the three hands by clicking on it with the mouse, the selected option will display in the player window, and the computers random choice will be displayed in the computer window. At the top of the screen the scores will be displayed and updated, at the bottom underneath the player selection it will give a message of who won or if it was a draw. After completing the set number of rounds, depending on the outcome a congratulations message will appear if the player wins, or a losing message will appear if the player loses. At any point of the game the player can go back to the main menu via the main menu button.
+* Once the player has chosen their arena, selected the number of rounds and entered their name, the main game will start by pushing the start game button. The player chooses from one of the three hands by clicking on it with the mouse, the selected option will display in the player window, and the computers random choice will be displayed in the computer window. At the top of the screen the scores will be displayed and updated, at the bottom underneath the player selection it will give a message of who won or if it was a draw. After completing the set number of rounds, depending on the outcome a congratulations message will appear if the player wins, or a losing message will appear if the player loses. At any point of the game the player can go back to the main menu via the main menu button.
 
 ![image of main game](/assets/images/gamewithpicks.png)
 
@@ -97,7 +97,7 @@ The main game
 
 * HTML5
 * CSS3
-* JavaScript - I have added a error message to the game, if no JavaScript is active on the device used a message with instructions on how to get the game to function.
+* JavaScript - I have added an error message to the game, if no JavaScript is active on the device used a message will appear with instructions on how to get the game to function.
 
 ![image of error message no js](/assets/images/errormessage.png)
 
@@ -109,11 +109,11 @@ Photos source
  * https://www.vecteezy.com/
  * https://icons8.com/
  
- To save on file space I ran all photos through https://tinypng.com/
+ To save on file space I ran all of the images through https://tinypng.com/
  
 
 ## Git
-Git was used for version control by utilizing the Gitpod terminal, to commit to Git and Push to GitHub.
+Git was used for version control by utilizing the Gitpod terminal, to commit to Git and push to GitHub.
 ## GitHub:
 GitHub is used to store the projects code after being pushed from Git.
 
@@ -130,14 +130,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 * W3C Markup Validatorindex.html added html from script.js - [Results](https://validator.w3.org/nu/#textarea)
 
-After checking through I noticed results link was showing no results of test so i have added screen shot 
+After checking through I noticed the results link was showing no results of test so I have added screen shot. 
 
 ![image of W3C with implamented html from JavaScript](/assets/images/w3chtmlwithhtmlfromjs.png)   
 
 * W3C CSS Validator - (https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fharriss1989.github.io%2Frock-paper-scissor-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 * JavaScript 
-No errors were present when passing through the validator service at JSHint.com 
+No errors were present when passing through the validator service at JSHint.com.
 [Results](/assets/images/JSHint.png)
 ### Accessibility Report
 
@@ -166,15 +166,15 @@ No errors were present when passing through the validator service at JSHint.com
 * Hp Laptop
     * Microsoft Edge - version 96.0.1054.34 
 
-From these test above I ensured all buttons worked correctly. I used the devices listed above to test the deployed site. I also used the devtools emulator to test the site at various sizes. I found on the iphone the it was automtically zoomed in once pinching the screen to zoom out the game fit better on the screen. No bugs were found whilst testing.
+From these test above I ensured all buttons worked correctly. I used the devices listed above to test the deployed site. I also used the devtools emulator to test the site at various sizes. I found on the iphone that it was automtically zoomed in but once pinching the screen to zoom out, the game fit better on the screen. No bugs were found whilst testing.
 
 # Deployment
-* The site was deployed to Github pages.the step to deploy are as follows:
-  * In the GitHub pages, navigate to the settings tab
-  * select the pages link from the setting menu on the left hand side 
-  * Under the GitHub pages from the source section drop-down menu, select the master branch
-  * Once the master branch has been selected,the page will be automatically refreshed
-  with a detailed ribbon display to indecate the successful deployment.
+* The site was deployed to Github pages. The steps to deploy are as follows:
+  * In the GitHub pages, navigate to the settings tab.
+  * select the pages link from the setting menu on the left hand side. 
+  * Under the GitHub pages from the source section drop-down menu, select the master branch.
+  * Once the master branch has been selected,the page will be automatically refreshed.
+  with a detailed ribbon display to indicate the successful deployment.
 
  [Link to live site](https://harriss1989.github.io/rock-paper-scissor-game/)
  
@@ -190,13 +190,13 @@ Media source
  * I referred to MDN Web Docs
  * I referred to w3schools to check HTML, CSS and JavaScript.
  * My mentor reffered me to this web page (https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
- * I referred to stack overflow to see if my issues have been asked befor.
+ * I referred to stack overflow to see if my issues have been asked before.
 
  ### Acknowledgments
 
- * Massive thank you to the brilliant Slack community, especially Matt Boddden who spent a lot of time helping me further understand the concepts of JavaScript.
+ * Massive thank you to the brilliant Slack community, especially Matt Bodden who spent a lot of time helping me further understand the concepts of JavaScript.
 
  * Also thanks to Jack Conroy, Ollie Train and Gwen Bradbury for letting me gate crash their calls when I was stuck.
  
- * And lastly my partner, thanks for helpimg me when im frustrated and for supporting me during my course.
+ * And lastly my partner, thanks for helpimg me when I am frustrated and for supporting me during my course.
  
