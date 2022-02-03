@@ -97,7 +97,12 @@ The main game
 
 * HTML5
 * CSS3
-* JavaScript
+* JavaScript - I have added a error message to the game, if no JavaScript is active on the device used a message with instructions on how to get the game to function.
+
+![image of error message no js](/assets/images/errormessage.png)
+
+
+
 
 Photos source
 
@@ -125,6 +130,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 * W3C Markup Validatorindex.html added html from script.js - [Results](https://validator.w3.org/nu/#textarea)
 
+After checking through I noticed results link was showing no results of test so i have added screen shot 
+
+![image of W3C with implamented html from JavaScript](/assets/images/w3chtmlwithhtmlfromjs.png)   
+
 * W3C CSS Validator - (https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fharriss1989.github.io%2Frock-paper-scissor-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 * JavaScript 
@@ -142,22 +151,22 @@ No errors were present when passing through the validator service at JSHint.com
 
 # Devices Tested
 * iPhone Xr 
-    * Safari - iOS 14.8.1 
+    * Safari - iOS 15.3
     * Chrome - Version 97.0.4692.99
 * iPad 7th generation 
     * Safari - iOS 14.8.1
 * iPhone 11 
-    * Safari - iOS 15.1
+    * Safari - iOS 15.3
 * iPhone 11 pro max
-    * Safari - iOS 15.1
+    * Safari - iOS 15.3
 * Apple MacBook Air 13"
     * Chrome - Version 97.0.4692.99
-    * Safari - Version 15.1 (17612.2.9.1.20)
-    * Firefox -Version 94.0.2
+    * Safari - Version 15.2 (17612.3.6.1.6)
+    * Firefox - Version 94.0.2 (64-bit)
 * Hp Laptop
     * Microsoft Edge - version 96.0.1054.34 
 
-From these test above I ensured all buttons worked correctly. I used the devices listed above to test the deployed site. I also used the devtools emulator to test the site at various sizes. 
+From these test above I ensured all buttons worked correctly. I used the devices listed above to test the deployed site. I also used the devtools emulator to test the site at various sizes. I found on the iphone the it was automtically zoomed in once pinching the screen to zoom out the game fit better on the screen. No bugs were found whilst testing.
 
 # Deployment
 * The site was deployed to Github pages.the step to deploy are as follows:
@@ -181,6 +190,7 @@ Media source
  * I referred to MDN Web Docs
  * I referred to w3schools to check HTML, CSS and JavaScript.
  * My mentor reffered me to this web page (https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
+ * I referred to stack overflow to see if my issues have been asked befor.
 
  ### Acknowledgments
 

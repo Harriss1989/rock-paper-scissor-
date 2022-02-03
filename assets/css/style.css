@@ -402,6 +402,7 @@ img {
 
 
 /* media Querys */
+/* bigger screen sizes */
 @media screen and (max-width: 1920px) {
 
     .modal-content {
@@ -420,7 +421,7 @@ img {
         font-size: 15px;
     }
 }
-
+/* Small laptop screens */
 @media screen and (max-width: 1200px) {
 
     .modal-content {
@@ -447,6 +448,7 @@ img {
     }
 }
 
+/* large talets */
 @media screen and (max-width: 800px) {
 
     .modal-content {
@@ -499,6 +501,7 @@ img {
     }
 }
 
+/* mobile devices */
 @media screen and (max-width: 650px) {
 
     .modal-content {
