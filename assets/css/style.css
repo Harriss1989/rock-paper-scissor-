@@ -410,12 +410,25 @@ img {
     }
 }
 
+@media screen and (max-width: 1610px) {
+
+    img {
+        height: 130px;
+    }
+
+    .grid-container>div {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
 
     .modal-content {
         margin: 35% auto;
 
     }
+
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -427,6 +440,10 @@ img {
 
     .modal-body {
         padding: 17px;
+    }
+
+    .grid-container>div {
+        font-size: 14px;
     }
 }
 
@@ -472,12 +489,13 @@ img {
 
     .grid-container>div {
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
 
     }
 
     img {
         margin-top: 1rem;
+        height: 130px;
     }
 }
 
